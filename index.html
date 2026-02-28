@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kurt | Portfolio</title>
+  <meta name="description" content="Kurt's portfolio website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-glow" aria-hidden="true"></div>
+
+  <div class="layout container">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div>
+          <p class="kicker">Kurt</p>
+          <h1>Frontend Developer</h1>
+          <p class="subtitle">I build clean, performant interfaces with strong UX and maintainable code.</p>
+        </div>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="section-nav">Sections</button>
+
+        <nav id="section-nav" class="section-nav" aria-label="Section navigation">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+
+        <div class="socials" aria-label="Social links">
+          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section id="about" class="content-section">
+        <h2>About</h2>
+        <p>
+          I enjoy building digital products that feel fast and intentional. My approach combines practical
+          engineering with product-focused design decisions, so users get intuitive experiences and teams get
+          systems they can maintain.
+        </p>
+        <p>
+          I work mostly with JavaScript/TypeScript, React, and modern CSS. I care a lot about accessibility,
+          performance, and delivering value quickly without sacrificing quality.
+        </p>
+      </section>
+
+      <section id="experience" class="content-section">
+        <h2>Experience</h2>
+
+        <article class="timeline-item">
+          <p class="period">2024 - Present</p>
+          <div class="item-body">
+            <h3>Frontend Developer · Freelance</h3>
+            <p>
+              Built responsive web apps and marketing sites for small businesses, focusing on conversion,
+              maintainability, and fast page performance.
+            </p>
+            <ul class="tags">
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <p class="period">2022 - 2024</p>
+          <div class="item-body">
+            <h3>Web Developer · Product Team</h3>
+            <p>
+              Collaborated with design and backend teams to ship core user-facing features, improve accessibility,
+              and reduce frontend bundle size across the platform.
+            </p>
+            <ul class="tags">
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>REST APIs</li>
+              <li>Jest</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="projects" class="content-section">
+        <h2>Projects</h2>
+
+        <article class="project-card">
+          <h3>Analytics Dashboard</h3>
+          <p>Admin dashboard with KPI tracking, filters, and reusable data visualization components.</p>
+          <ul class="tags">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Chart.js</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Appointment Platform</h3>
+          <p>Booking flow with service selection, schedule management, and automated confirmation emails.</p>
+          <ul class="tags">
+            <li>Next.js</li>
+            <li>PostgreSQL</li>
+            <li>Prisma</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Personal Portfolio v2</h3>
+          <p>Lightweight portfolio template emphasizing content hierarchy, speed, and reusable sections.</p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <p>
+          I am currently open to freelance and full-time opportunities. If you have a project in mind, send me a
+          message and I will get back to you.
+        </p>
+        <a class="email-link" href="mailto:you@example.com">you@example.com</a>
+      </section>
+
+      <footer class="footer">
+        <p>Built by Kurt · <span id="year"></span></p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
