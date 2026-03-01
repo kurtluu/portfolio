@@ -26,18 +26,32 @@ const navItems: NavItem[] = [
 
 const timeline: TimelineItem[] = [
   {
-    period: "2024 - Present",
-    title: "Frontend Developer · Freelance",
+    period: "MAR - OCT 2025",
+    title: "Senior Technical Lead · HCLTech",
     description:
       "Built responsive web apps and marketing sites for small businesses, focusing on conversion, maintainability, and fast page performance.",
     tags: ["TypeScript", "React", "Next.js", "CSS"],
   },
   {
-    period: "2022 - 2024",
-    title: "Web Developer · Product Team",
+    period: "2023 - 2025",
+    title: "Software Engineer · Microsoft",
     description:
       "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
     tags: ["JavaScript", "Node.js", "REST APIs", "Jest"],
+  },
+  {
+    period: "2020 - 2023",
+    title: "Frontend Software Engineer · Nuance",
+    description:
+      "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
+    tags: ["JavaScript", "Node.js", "REST APIs", "Jest"],
+  },
+  {
+    period: "2018 - 2020",
+    title: "Jr. Software Developer · TAP Series LLC",
+    description:
+      "I contributed to full-stack web development projects focused on building responsive, user-friendly applications and internal tools. I developed a mobile-first e-learning platform and designed interactive activity modules with drag-and-drop functionality. I also optimized backend reporting systems, rebuilt performance-critical tools achieving significant speed improvements, and implemented automated PDF invoice generation to reduce operational overhead. This role strengthened my foundation in frontend architecture, backend integration, and performance optimization.",
+    tags: ["JavaScript", "HTML", "CSS", "PHP", "MySQL", "Python", "Angular", "Bootstrap", "jQuery", "AJAX", "Draggable.js", "pandas"],
   },
 ];
 
@@ -158,7 +172,7 @@ function App() {
         onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
       >
         <span className="theme-icon" aria-hidden="true">
-          {theme === "dark" ? "☀" : "☾"}
+          {theme === "dark" ? "â˜€" : "â˜¾"}
         </span>
       </button>
 
@@ -215,8 +229,8 @@ function App() {
           <section id="about" className="content-section">
             <h2>About</h2>
             <p>
-              I’m a frontend-leaning software engineer driven by the idea that great software is both technically
-              sound and beautifully crafted. I’m especially interested in building systems and interfaces that are
+              I'm a frontend-leaning software engineer driven by the idea that great software is both technically
+              sound and beautifully crafted. I'm especially interested in building systems and interfaces that are
               scalable, accessible, and thoughtfully designed.
             </p>
             <p>
@@ -226,12 +240,12 @@ function App() {
               how I approach architecture, performance, and maintainability.
             </p>
             <p>
-              Today, I’m focused on mastering modern frontend technologies - React, TypeScript, and component-driven
+              Today, I'm focused on mastering modern frontend technologies - React, TypeScript, and component-driven
               development - with a strong interest in design systems and building products that feel intuitive and
               refined.
             </p>
             <p>
-              When I’m not coding, you'll catch me on the mats training Brazilian jiu-jitsu, in my garge gym lifting weights, playing tennis,
+              When I'm not coding, you'll catch me on the mats training Brazilian jiu-jitsu, in my garge gym lifting weights, playing tennis,
               snowboarding, mixing music or gaming.
             </p>
           </section>
@@ -240,9 +254,9 @@ function App() {
             <h2>Experience</h2>
             {timeline.map((item) => (
               <article key={item.title} className="timeline-item">
-                <p className="period">{item.period}</p>
                 <div className="item-body">
                   <h3>{item.title}</h3>
+                  <p className="period">{item.period}</p>
                   <p>{item.description}</p>
                   <ul className="tags">
                     {item.tags.map((tag) => (
@@ -281,7 +295,7 @@ function App() {
           </section>
 
           <footer className="footer">
-            <p>Built by Kurt · {year}</p>
+            <p>Built by Kurt Â· {year}</p>
           </footer>
         </main>
       </div>
