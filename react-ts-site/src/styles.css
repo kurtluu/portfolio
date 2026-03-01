@@ -42,7 +42,7 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: "Sora", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
