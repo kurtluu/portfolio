@@ -113,8 +113,8 @@ function App() {
         <aside className="sidebar">
           <div className="sidebar-inner">
             <div>
-              <p className="kicker">Kurt</p>
-              <h1>Frontend Developer</h1>
+              <h1 className="name">Kurt Luu</h1>
+              <p className="kicker">Software Engineer</p>              
               <p className="subtitle">
                 I build clean, performant interfaces with strong UX and maintainable code.
               </p>
