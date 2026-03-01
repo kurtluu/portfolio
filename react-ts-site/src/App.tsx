@@ -183,7 +183,7 @@ function App() {
               <h1 className="name">Kurt Luu</h1>
               <p className="kicker">Software Engineer</p>
               <p className="subtitle">
-                I build clean, performant interfaces with strong UX and maintainable code.
+                Experienced in building scalable web applications and production-ready systems.
               </p>
             </div>
 
