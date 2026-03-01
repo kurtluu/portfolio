@@ -108,12 +108,15 @@ a {
 }
 
 .sidebar-inner {
-  position: sticky;
+  position: fixed;
   top: 3.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: calc(100vh - 6.4rem);
+  gap: 2rem;
+  align-items: flex-start;
+  width: clamp(260px, 34vw, 420px);
+  max-height: calc(100vh - 6.4rem);
+  overflow: auto;
 }
 
 .kicker {
