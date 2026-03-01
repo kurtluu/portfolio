@@ -63,9 +63,9 @@ const projects: Project[] = [
 ];
 
 const socialLinks = [
-  { href: "https://github.com", label: "GitHub" },
-  { href: "https://linkedin.com", label: "LinkedIn" },
-  { href: "mailto:you@example.com", label: "Email" },
+  { href: "https://github.com/kurtluu", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/kurtluu/", label: "LinkedIn" },
+  { href: "mailto:.com", label: "Email" },
 ];
 
 type Theme = "dark" | "light";
@@ -252,3 +252,4 @@ function App() {
 }
 
 export default App;
+
