@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type NavItem = {
   id: string;
@@ -69,10 +69,29 @@ const socialLinks = [
   { href: "mailto:you@example.com", label: "Email" },
 ];
 
+type Theme = "dark" | "light";
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState("about");
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") {
+      return "dark";
+    }
+
+    const savedTheme = window.localStorage.getItem("theme");
+    if (savedTheme === "dark" || savedTheme === "light") {
+      return savedTheme;
+    }
+
+    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  });
   const year = useMemo(() => new Date().getFullYear(), []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    window.localStorage.setItem("theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     const sections = navItems
@@ -108,13 +127,23 @@ function App() {
   return (
     <>
       <div className="background-glow" aria-hidden="true" />
+      <button
+        className="theme-toggle"
+        type="button"
+        aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+        onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
+      >
+        <span className="theme-icon" aria-hidden="true">
+          {theme === "dark" ? "☀" : "☾"}
+        </span>
+      </button>
 
       <div className="layout container">
         <aside className="sidebar">
           <div className="sidebar-inner">
             <div>
               <h1 className="name">Kurt Luu</h1>
-              <p className="kicker">Software Engineer</p>              
+              <p className="kicker">Software Engineer</p>
               <p className="subtitle">
                 I build clean, performant interfaces with strong UX and maintainable code.
               </p>
