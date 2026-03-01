@@ -215,13 +215,24 @@ function App() {
           <section id="about" className="content-section">
             <h2>About</h2>
             <p>
-              I enjoy building digital products that feel fast and intentional. My approach combines practical
-              engineering with product-focused design decisions, so users get intuitive experiences and teams get
-              systems they can maintain.
+              I’m a frontend-leaning software engineer driven by the idea that great software is both technically
+              sound and beautifully crafted. I’m especially interested in building systems and interfaces that are
+              scalable, accessible, and thoughtfully designed.
             </p>
             <p>
-              I work mostly with JavaScript/TypeScript, React, and modern CSS. I care a lot about accessibility,
-              performance, and delivering value quickly without sacrificing quality.
+              My experience includes leading global deployments for enterprise clients, developing internal automation
+              tools to improve operational efficiency, and collaborating across cross-functional teams to ship reliable
+              software at scale. Working across distributed systems and real-world production environments has shaped
+              how I approach architecture, performance, and maintainability.
+            </p>
+            <p>
+              Today, I’m focused on mastering modern frontend technologies - React, TypeScript, and component-driven
+              development - with a strong interest in design systems and building products that feel intuitive and
+              refined.
+            </p>
+            <p>
+              When I’m not coding, you'll catch me on the mats training Brazilian jiu-jitsu, in my garge gym lifting weights, playing tennis,
+              snowboarding, mixing music or gaming.
             </p>
           </section>
 
