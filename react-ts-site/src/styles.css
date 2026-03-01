@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0a192f;
+  --bg: rgb(24 24 27 / var(--tw-bg-opacity, 1));
   --panel: #112240;
   --text: #ccd6f6;
   --muted: #8892b0;
@@ -51,9 +51,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(circle at 15% 10%, var(--glow-a), transparent 30%),
-    radial-gradient(circle at 85% 30%, var(--glow-b), transparent 36%);
+  background: none;
 }
 
 .theme-toggle {
