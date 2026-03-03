@@ -69,10 +69,10 @@ const projects: Project[] = [
     tags: ["Next.js", "PostgreSQL", "Prisma"],
   },
   {
-    title: "Personal Portfolio v2",
+    title: "Personal Portfolio",
     description:
-      "Lightweight portfolio template emphasizing content hierarchy, speed, and reusable sections.",
-    tags: ["React", "TypeScript", "Vite"],
+      "My personal portfolio site featuring responsive sections, theme switching, and custom UI styling focused on clean UX and performance.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "CSS"],
   },
 ];
 
@@ -309,7 +309,7 @@ function App() {
           </section>          
 
           <footer className="footer">
-            <p>2026 © Kurt Luu</p>
+            <p>Built with React and Tailwind CSS. Design inspired by Peter Steinberger, Yangshun Tay, and Brittany Chiang.</p>
             <div className="footer-icons" aria-label="Footer social links">
               {socialLinks.map((link) => (
                 <a
@@ -334,6 +334,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

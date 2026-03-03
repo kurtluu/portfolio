@@ -302,12 +302,14 @@ h3 {
   padding-top: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 1rem;
 }
 
 .footer p {
   font: 400 0.82rem/1.5 "Fira Code", monospace;
+  max-width: 52ch;
+  text-wrap: balance;
 }
 
 .footer-icons {
