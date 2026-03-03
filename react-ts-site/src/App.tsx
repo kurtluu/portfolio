@@ -110,7 +110,6 @@ function SocialIcon({ label }: { label: string }) {
 }
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState("about");
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === "undefined") {
@@ -187,26 +186,12 @@ function App() {
               </p>
             </div>
 
-            <button
-              className="menu-toggle"
-              aria-expanded={menuOpen}
-              aria-controls="section-nav"
-              onClick={() => setMenuOpen((prev) => !prev)}
-            >
-              Sections
-            </button>
-
-            <nav
-              id="section-nav"
-              className={`section-nav ${menuOpen ? "open" : ""}`.trim()}
-              aria-label="Section navigation"
-            >
+            <nav id="section-nav" className="section-nav" aria-label="Section navigation">
               {navItems.map((item) => (
                 <a
                   key={item.id}
                   className={`nav-link ${activeId === item.id ? "active" : ""}`.trim()}
                   href={`#${item.id}`}
-                  onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
                 </a>
@@ -292,10 +277,10 @@ function App() {
             <a className="email-link" href="mailto:you@example.com">
               you@example.com
             </a>
-          </section>
+          </section>          
 
           <footer className="footer">
-            <p>Built by Kurt Â· {year}</p>
+            <p>2026 © Kurt Luu</p>
           </footer>
         </main>
       </div>
@@ -304,4 +289,6 @@ function App() {
 }
 
 export default App;
+
+
 

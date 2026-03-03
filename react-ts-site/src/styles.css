@@ -89,15 +89,15 @@ a {
 }
 
 .container {
-  width: min(1100px, 92vw);
+  width: min(860px, 92vw);
   margin: 0 auto;
 }
 
 .layout {
   position: relative;
-  display: grid;
-  grid-template-columns: 42% 58%;
-  gap: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
   padding: 6rem 0 6rem;
 }
 
@@ -106,15 +106,14 @@ a {
 }
 
 .sidebar-inner {
-  position: fixed;
-  top: 5rem;
+  position: static;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
   align-items: flex-start;
-  width: clamp(260px, 34vw, 420px);
-  max-height: calc(100vh - 6.4rem);
-  overflow: auto;
+  width: min(720px, 100%);
+  max-height: none;
+  overflow: visible;
 }
 
 .kicker {
@@ -131,28 +130,17 @@ h1 {
 }
 
 .subtitle {
-  max-width: 32ch;
+  max-width: 60ch;
   margin-top: 1rem;
   color: var(--muted);
 }
 
-.menu-toggle {
-  display: none;
-  margin: 1rem 0 0;
-  width: fit-content;
-  border: 1px solid var(--line);
-  color: var(--text);
-  background: transparent;
-  border-radius: 8px;
-  padding: 0.45rem 0.8rem;
-  font: 500 0.88rem/1 "Fira Code", monospace;
-}
-
 .section-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.65rem;
-  margin-top: 2.4rem;
+  margin-top: 1rem;
 }
 
 .nav-link {
@@ -172,7 +160,7 @@ h1 {
 .nav-link::before {
   content: "";
   display: inline-block;
-  width: 28px;
+  width: 16px;
   height: 1px;
   background: var(--line);
   transition: width 0.2s ease, background-color 0.2s ease;
@@ -185,14 +173,14 @@ h1 {
 
 .nav-link:hover::before,
 .nav-link.active::before {
-  width: 52px;
+  width: 28px;
   background: var(--accent);
 }
 
 .socials {
   display: flex;
   gap: 1rem;
-  margin-top: 49.5rem;
+  margin-top: 0.5rem;
 }
 
 .socials a {
@@ -208,7 +196,7 @@ h1 {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   padding-bottom: 2rem;
 }
 
@@ -313,6 +301,11 @@ h3 {
   font: 400 0.82rem/1.5 "Fira Code", monospace;
 }
 
+.copyright-symbol {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+}
+
 @media (max-width: 980px) {
   .theme-toggle {
     top: 0.85rem;
@@ -320,27 +313,12 @@ h3 {
   }
 
   .layout {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.25rem;
     padding-top: 2rem;
   }
 
   .sidebar-inner {
     min-height: auto;
-    position: static;
-  }
-
-  .menu-toggle {
-    display: inline-flex;
-  }
-
-  .section-nav {
-    display: none;
-    margin-top: 1rem;
-  }
-
-  .section-nav.open {
-    display: flex;
   }
 
   .content {
