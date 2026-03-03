@@ -204,7 +204,7 @@ function App() {
         onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
       >
         <span className="theme-icon" aria-hidden="true">
-          {theme === "dark" ? "â˜€" : "â˜¾"}
+          {theme === "dark" ? "\u2600" : "\u263E"}
         </span>
       </button>
 
@@ -334,6 +334,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
