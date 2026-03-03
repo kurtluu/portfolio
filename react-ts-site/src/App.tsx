@@ -212,8 +212,8 @@ function App() {
         <aside className="sidebar">
           <div className="sidebar-inner">
             <div>
-              <h1 className="name">Kurt Luu</h1>
-              <p className="kicker">Software Engineer</p>
+              <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Kurt Luu</h1>
+              <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Software Engineer</h2>
               <p className="subtitle">
                 Experienced in building scalable web applications and production-ready systems.
               </p>
@@ -252,9 +252,9 @@ function App() {
 
         <main className="content">
           <section id="about" className="content-section">
-            <h2>About</h2>
+            <h2 className="font-bold uppercase tracking-widest">About</h2>
             <p>
-              I'm a frontend-leaning software engineer driven by the idea that great software is both technically
+              Hi, I'm Kurt! I'm a frontend-leaning software engineer driven by the idea that great software is both technically
               sound and beautifully crafted. I'm especially interested in building systems and interfaces that are
               scalable, accessible, and thoughtfully designed.
             </p>
@@ -276,7 +276,7 @@ function App() {
           </section>
 
           <section id="experience" className="content-section">
-            <h2>Experience</h2>
+            <h2 className="font-bold uppercase tracking-widest">Experience</h2>
             {timeline.map((item) => (
               <article key={item.title} className="timeline-item">
                 <div className="item-body">
@@ -294,7 +294,7 @@ function App() {
           </section>
 
           <section id="projects" className="content-section">
-            <h2>Projects</h2>
+            <h2 className="font-bold uppercase tracking-widest">Projects</h2>
             {projects.map((project) => (
               <article key={project.title} className="project-card">
                 <h3>{project.title}</h3>
@@ -306,21 +306,26 @@ function App() {
                 </ul>
               </article>
             ))}
-          </section>
-
-          <section id="contact" className="content-section">
-            <h2>Contact</h2>
-            <p>
-              I am currently open to freelance and full-time opportunities. If you have a project in mind, send me
-              a message and I will get back to you.
-            </p>
-            <a className="email-link" href="mailto:you@example.com">
-              you@example.com
-            </a>
           </section>          
 
           <footer className="footer">
             <p>2026 © Kurt Luu</p>
+            <div className="footer-icons" aria-label="Footer social links">
+              {socialLinks.map((link) => (
+                <a
+                  key={`footer-${link.label}`}
+                  className="footer-icon-link"
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={link.label}
+                >
+                  <span className="social-icon" aria-hidden="true">
+                    <SocialIcon label={link.label} />
+                  </span>
+                </a>
+              ))}
+            </div>
           </footer>
         </main>
       </div>
@@ -329,6 +334,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

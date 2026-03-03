@@ -118,10 +118,10 @@ a {
 
 .kicker {
   margin: 0;
-  font: 500 0.86rem/1 "Fira Code", monospace;
+  font: 500 1.1rem/1;
   letter-spacing: 0.04em;
   color: var(--accent);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h1 {
@@ -214,12 +214,8 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 1.3rem;
-  font-size: 0.98rem;
-  font-family: "Fira Code", monospace;
+  margin: 1rem 0 1.25rem;
   color: var(--accent);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 p {
@@ -304,15 +300,32 @@ h3 {
 .footer {
   border-top: 1px solid var(--line);
   padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .footer p {
   font: 400 0.82rem/1.5 "Fira Code", monospace;
 }
 
-.copyright-symbol {
-  font-family: "Inter", sans-serif;
-  font-size: 1em;
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icon-link:hover {
+  color: var(--accent);
+  transform: rotate(6deg);
 }
 
 @media (max-width: 980px) {
@@ -332,5 +345,10 @@ h3 {
 
   .content {
     gap: 3.5rem;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
