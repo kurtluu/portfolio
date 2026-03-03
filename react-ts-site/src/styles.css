@@ -184,13 +184,22 @@ h1 {
 }
 
 .socials a {
+  display: inline-block;
   color: var(--muted);
   text-decoration: none;
   font-size: 0.92rem;
 }
 
+.social-link {
+  transition: transform 0.2s ease;
+}
+
 .socials a:hover {
   color: var(--accent);
+}
+
+.social-link:hover {
+  transform: rotate(6deg);
 }
 
 .content {

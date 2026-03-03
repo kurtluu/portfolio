@@ -233,7 +233,14 @@ function App() {
 
             <div className="socials" aria-label="Social links">
               {socialLinks.map((link) => (
-                <a key={link.label} href={link.href} target="_blank" rel="noreferrer" aria-label={link.label}>
+                <a
+                  key={link.label}
+                  className="social-link"
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={link.label}
+                >
                   <span className="social-icon" aria-hidden="true">
                     <SocialIcon label={link.label} />
                   </span>
