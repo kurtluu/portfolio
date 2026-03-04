@@ -1,4 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
+import hclTechLogo from "./assets/HCLTech-logo.svg";
+import microsoftLogo from "./assets/msft-logo.svg";
+import nuanceLogo from "./assets/naunce-logo.jpeg";
+import tapLogo from "./assets/tap-logo.png";
 
 type NavItem = {
   id: string;
@@ -8,6 +12,8 @@ type NavItem = {
 type TimelineItem = {
   period: string;
   title: string;
+  company: string;
+  logoUrl?: string;
   description: string;
   tags: string[];
 };
@@ -28,6 +34,8 @@ const timeline: TimelineItem[] = [
   {
     period: "MAR - OCT 2025",
     title: "Senior Technical Lead · HCLTech",
+    company: "HCLTech",
+    logoUrl: hclTechLogo,
     description:
       "Built responsive web apps and marketing sites for small businesses, focusing on conversion, maintainability, and fast page performance.",
     tags: ["TypeScript", "React", "Next.js", "CSS"],
@@ -35,6 +43,8 @@ const timeline: TimelineItem[] = [
   {
     period: "2023 - 2025",
     title: "Software Engineer · Microsoft",
+    company: "Microsoft",
+    logoUrl: microsoftLogo,
     description:
       "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
     tags: ["JavaScript", "Node.js", "REST APIs", "Jest"],
@@ -42,6 +52,8 @@ const timeline: TimelineItem[] = [
   {
     period: "2020 - 2023",
     title: "Frontend Software Engineer · Nuance",
+    company: "Nuance",
+    logoUrl: nuanceLogo,
     description:
       "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
     tags: ["JavaScript", "Node.js", "REST APIs", "Jest"],
@@ -49,6 +61,8 @@ const timeline: TimelineItem[] = [
   {
     period: "2018 - 2020",
     title: "Jr. Software Developer · TAP Series LLC",
+    company: "TAP Series LLC",
+    logoUrl: tapLogo,
     description:
       "I contributed to full-stack web development projects focused on building responsive, user-friendly applications and internal tools. I developed a mobile-first e-learning platform and designed interactive activity modules with drag-and-drop functionality. I also optimized backend reporting systems, rebuilt performance-critical tools achieving significant speed improvements, and implemented automated PDF invoice generation to reduce operational overhead. This role strengthened my foundation in frontend architecture, backend integration, and performance optimization.",
     tags: ["JavaScript", "HTML", "CSS", "PHP", "MySQL", "Python", "Angular", "Bootstrap", "jQuery", "AJAX", "Draggable.js", "pandas"],
@@ -79,7 +93,7 @@ const projects: Project[] = [
 const socialLinks = [
   { href: "https://github.com/kurtluu", label: "GitHub" },
   { href: "https://www.linkedin.com/in/kurtluu/", label: "LinkedIn" },
-  { href: "mailto:.com", label: "Email" },
+  { href: "mailto:kurtluu12@gmail.com", label: "Email" },
 ];
 
 type Theme = "dark" | "light";
@@ -279,6 +293,20 @@ function App() {
             <h2 className="font-bold uppercase tracking-widest">Experience</h2>
             {timeline.map((item) => (
               <article key={item.title} className="timeline-item">
+                <div className="timeline-logo-wrap" aria-hidden="true">
+                  {item.logoUrl ? (
+                    <img className="timeline-logo" src={item.logoUrl} alt="" loading="lazy" />
+                  ) : (
+                    <span className="timeline-logo-fallback">
+                      {item.company
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase()}
+                    </span>
+                  )}
+                </div>
                 <div className="item-body">
                   <h3>{item.title}</h3>
                   <p className="period">{item.period}</p>
@@ -334,9 +362,6 @@ function App() {
 }
 
 export default App;
-
-
-
 
 
 

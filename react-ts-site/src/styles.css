@@ -243,6 +243,13 @@ p {
   transition: border-color 0.22s ease, background-color 0.22s ease, transform 0.22s ease;
 }
 
+.timeline-item {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: start;
+}
+
 .timeline-item + .timeline-item,
 .project-card + .project-card {
   margin-top: 1rem;
@@ -267,6 +274,29 @@ h3 {
   margin: 0;
   font-size: 1rem;
   color: var(--text);
+}
+
+.timeline-logo-wrap {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  background: transparent;
+}
+
+.timeline-logo-fallback {
+  font: 700 0.72rem/1 "Fira Code", monospace;
+  letter-spacing: 0.04em;
+  color: var(--accent);
 }
 
 .item-body p,
@@ -353,6 +383,16 @@ h3 {
 
   .content {
     gap: 3.5rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .timeline-logo-wrap {
+    width: 36px;
+    height: 36px;
   }
 
   .footer {
