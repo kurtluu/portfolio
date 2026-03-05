@@ -61,17 +61,11 @@ const timeline: TimelineItem[] = [
 
 const projects: Project[] = [
   {
-    title: "Analytics Dashboard",
+    title: "Playlist-dl",
     description:
-      "Admin dashboard with KPI tracking, filters, and reusable data visualization components.",
-    tags: ["React", "TypeScript", "Chart.js"],
-  },
-  {
-    title: "Appointment Platform",
-    description:
-      "Booking flow with service selection, schedule management, and automated confirmation emails.",
-    tags: ["Next.js", "PostgreSQL", "Prisma"],
-  },
+      "Web app for searching songs and converting them into downloadable audio. View and download individual tracks, process Spotify or Soundcloud playlists into matched songs, and export as ZIP files of MP3s with metadata tagging.",
+    tags: ["React", "Next.js", "Node.js", "Spotify API", "Soundcloud API"],
+  },  
   {
     title: "Personal Portfolio",
     description:
@@ -274,7 +268,7 @@ function App() {
               refined.
             </p>
             <p>
-              When I'm not coding, you'll catch me on the mats training Brazilian jiu-jitsu, in my garge gym lifting weights, playing tennis,
+              When I'm not coding, you'll catch me on the mats training Brazilian jiu-jitsu, working out in my garage gym, playing tennis,
               snowboarding, mixing music or gaming.
             </p>
           </section>
