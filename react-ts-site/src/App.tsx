@@ -195,18 +195,18 @@ function App() {
   return (
     <>
       <div className="background-glow" aria-hidden="true" />
-      <button
-        className="theme-toggle"
-        type="button"
-        aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-        onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
-      >
-        <span className="theme-icon" aria-hidden="true">
-          {theme === "dark" ? "\u2600" : "\u263E"}
-        </span>
-      </button>
-
       <div className="layout container">
+        <button
+          className="theme-toggle"
+          type="button"
+          aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
+        >
+          <span className="theme-icon" aria-hidden="true">
+            {theme === "dark" ? "\u2600" : "\u263E"}
+          </span>
+        </button>
+
         <aside className="sidebar">
           <div className="sidebar-inner">
             <div>
