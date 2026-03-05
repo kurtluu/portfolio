@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import hclTechLogo from "./assets/HCLTech-logo.svg";
 import microsoftLogo from "./assets/msft-logo.svg";
-import nuanceLogo from "./assets/naunce-logo.jpeg";
 import tapLogo from "./assets/tap-logo.png";
 
 type NavItem = {
@@ -41,19 +40,10 @@ const timeline: TimelineItem[] = [
     tags: ["TypeScript", "React", "Next.js", "CSS"],
   },
   {
-    period: "2023 - 2025",
+    period: "2020 - 2025",
     title: "Software Engineer · Microsoft",
     company: "Microsoft",
     logoUrl: microsoftLogo,
-    description:
-      "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
-    tags: ["JavaScript", "Node.js", "REST APIs", "Jest"],
-  },
-  {
-    period: "2020 - 2023",
-    title: "Frontend Software Engineer · Nuance",
-    company: "Nuance",
-    logoUrl: nuanceLogo,
     description:
       "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
     tags: ["JavaScript", "Node.js", "REST APIs", "Jest"],
@@ -362,6 +352,5 @@ function App() {
 }
 
 export default App;
-
 
 
