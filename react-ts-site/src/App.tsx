@@ -37,7 +37,7 @@ const timeline: TimelineItem[] = [
     logoUrl: hclTechLogo,
     description:
       "Built responsive web apps and marketing sites for small businesses, focusing on conversion, maintainability, and fast page performance.",
-    tags: ["TypeScript", "React", "Next.js", "CSS"],
+    tags: ["JavaScript", "HTML/CSS", "Dynamics 365 CCaaS", "Copilot Studio", "Azure"],
   },
   {
     period: "2020 - 2025",
@@ -46,7 +46,7 @@ const timeline: TimelineItem[] = [
     logoUrl: microsoftLogo,
     description:
       "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
-    tags: ["JavaScript", "Node.js", "REST APIs", "Jest"],
+    tags: ["JavaScript", "HTML/CSS", "Node.js", "Business Rules", "Python", "REST APIs", "Azure"],
   },
   {
     period: "2018 - 2020",
@@ -55,7 +55,7 @@ const timeline: TimelineItem[] = [
     logoUrl: tapLogo,
     description:
       "I contributed to full-stack web development projects focused on building responsive, user-friendly applications and internal tools. I developed a mobile-first e-learning platform and designed interactive activity modules with drag-and-drop functionality. I also optimized backend reporting systems, rebuilt performance-critical tools achieving significant speed improvements, and implemented automated PDF invoice generation to reduce operational overhead. This role strengthened my foundation in frontend architecture, backend integration, and performance optimization.",
-    tags: ["JavaScript", "HTML", "CSS", "PHP", "MySQL", "Python", "Angular", "Bootstrap", "jQuery", "AJAX", "Draggable.js", "pandas"],
+    tags: ["JavaScript", "HTML/CSS", "PHP", "MySQL", "Python", "Angular", "AWS", "Bootstrap", "Draggable.js", "pandas"],
   },
 ];
 
