@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import type { PointerEvent } from "react";
 import hclTechLogo from "./assets/HCLTech-logo.svg";
 import microsoftLogo from "./assets/msft-logo.svg";
 import tapLogo from "./assets/tap-logo.png";
@@ -192,6 +193,21 @@ function App() {
     };
   }, []);
 
+  const handleCardPointerMove = (event: PointerEvent<HTMLElement>) => {
+    const card = event.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    card.style.setProperty("--spotlight-x", `${x}px`);
+    card.style.setProperty("--spotlight-y", `${y}px`);
+  };
+
+  const handleCardPointerLeave = (event: PointerEvent<HTMLElement>) => {
+    event.currentTarget.style.removeProperty("--spotlight-x");
+    event.currentTarget.style.removeProperty("--spotlight-y");
+  };
+
   return (
     <>
       <div className="background-glow" aria-hidden="true" />
@@ -276,7 +292,12 @@ function App() {
           <section id="experience" className="content-section">
             <h2 className="font-bold uppercase tracking-widest">Experience</h2>
             {timeline.map((item) => (
-              <article key={item.title} className="timeline-item">
+              <article
+                key={item.title}
+                className="timeline-item"
+                onPointerMove={handleCardPointerMove}
+                onPointerLeave={handleCardPointerLeave}
+              >
                 <div className="timeline-logo-wrap" aria-hidden="true">
                   {item.logoUrl ? (
                     <img className="timeline-logo" src={item.logoUrl} alt="" loading="lazy" />
@@ -308,7 +329,12 @@ function App() {
           <section id="projects" className="content-section">
             <h2 className="font-bold uppercase tracking-widest">Projects</h2>
             {projects.map((project) => (
-              <article key={project.title} className="project-card">
+              <article
+                key={project.title}
+                className="project-card"
+                onPointerMove={handleCardPointerMove}
+                onPointerLeave={handleCardPointerLeave}
+              >
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <ul className="tags">

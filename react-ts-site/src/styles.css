@@ -235,12 +235,39 @@ p {
 
 .timeline-item,
 .project-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
   border: 1px solid transparent;
   background: transparent;
   border-radius: var(--radius);
   padding: 1rem;
   margin: 0 -1rem;
   transition: border-color 0.22s ease, background-color 0.22s ease, transform 0.22s ease;
+}
+
+.timeline-item::before,
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    240px circle at var(--spotlight-x) var(--spotlight-y),
+    color-mix(in srgb, var(--accent) 26%, transparent),
+    transparent 72%
+  );
+  transition: opacity 0.22s ease;
+}
+
+.timeline-item > *,
+.project-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .timeline-item {
@@ -261,6 +288,13 @@ p {
   background: color-mix(in srgb, var(--panel) 45%, transparent);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
+}
+
+.timeline-item:hover::before,
+.timeline-item:focus-within::before,
+.project-card:hover::before,
+.project-card:focus-within::before {
+  opacity: 1;
 }
 
 .period {
