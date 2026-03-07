@@ -37,7 +37,7 @@ const timeline: TimelineItem[] = [
     company: "HCLTech",
     logoUrl: hclTechLogo,
     description:
-      "Built responsive web apps and marketing sites for small businesses, focusing on conversion, maintainability, and fast page performance.",
+      "Transitioned from Microsoft to HCLTech to support platform continuity during a strategic divestiture.",
     tags: ["JavaScript", "HTML/CSS", "Dynamics 365 CCaaS", "Copilot Studio", "Azure"],
   },
   {
@@ -46,7 +46,7 @@ const timeline: TimelineItem[] = [
     company: "Microsoft",
     logoUrl: microsoftLogo,
     description:
-      "Collaborated with design and backend teams to ship core user-facing features, improve accessibility, and reduce frontend bundle size across the platform.",
+      "Deployed web-based customer support experiences used by Fortune 500 enterprises across multiple industries, including Virtual Assistants, Live Chat, SMS, and API/SDK Integrations. Focused on building customizable user interfaces and interaction workflows that supported scalable customer communication platforms. Also collaborated with conversational AI and cross-functional teams to integrate automated assistants with live agent systems.",
     tags: ["JavaScript", "HTML/CSS", "Node.js", "Business Rules", "Python", "REST APIs", "Azure"],
   },
   {
@@ -55,7 +55,7 @@ const timeline: TimelineItem[] = [
     company: "TAP Series LLC",
     logoUrl: tapLogo,
     description:
-      "I contributed to full-stack web development projects focused on building responsive, user-friendly applications and internal tools. I developed a mobile-first e-learning platform and designed interactive activity modules with drag-and-drop functionality. I also optimized backend reporting systems, rebuilt performance-critical tools achieving significant speed improvements, and implemented automated PDF invoice generation to reduce operational overhead. This role strengthened my foundation in frontend architecture, backend integration, and performance optimization.",
+      "Developed and maintained web-based applications for an e-learning platform, building responsive interfaces and interactive training modules. Contributed across both front-end and back-end development to support new features and improve platform usability. Also helped automate several internal workflows and operational systems, including data processing pipelines, reporting tools, and document generation processes. Improved internal administrative tools and reporting systems to make them faster and easier for internal teams to use.",
     tags: ["JavaScript", "HTML/CSS", "PHP", "MySQL", "Python", "Angular", "AWS", "Bootstrap", "Draggable.js", "pandas"],
   },
 ];
