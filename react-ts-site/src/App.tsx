@@ -283,7 +283,7 @@ function App() {
               continuing to build modern frontend applications.
             </p>
             <p>
-              When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or working out in my garage gym. I also enjoy playing tennis,
+              When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or lifting in my garage gym. I also enjoy playing tennis,
               snowboarding, mixing music and gaming.
             </p>
           </section>
