@@ -408,7 +408,7 @@ h3 {
 
   .layout {
     gap: 2.25rem;
-    padding-top: 2rem;
+    padding: 3rem 1.5rem;
   }
 
   .sidebar-inner {
