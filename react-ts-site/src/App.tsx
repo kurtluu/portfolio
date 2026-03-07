@@ -264,7 +264,9 @@ function App() {
 
         <main className="content">
           <section id="about" className="content-section">
-            <h2 className="font-bold uppercase tracking-widest">About</h2>
+            <div className="section-heading">
+              <h2 className="font-bold uppercase tracking-widest">About</h2>
+            </div>
             <p>
               Hi, I'm Kurt! I'm a frontend-leaning software engineer driven by the idea that great software is both technically
               sound and beautifully crafted. I'm especially interested in building systems and interfaces that are
@@ -287,7 +289,9 @@ function App() {
           </section>
 
           <section id="experience" className="content-section">
-            <h2 className="font-bold uppercase tracking-widest">Experience</h2>
+            <div className="section-heading">
+              <h2 className="font-bold uppercase tracking-widest">Experience</h2>
+            </div>
             {timeline.map((item) => (
               <article
                 key={item.title}
@@ -324,7 +328,9 @@ function App() {
           </section>
 
           <section id="projects" className="content-section">
-            <h2 className="font-bold uppercase tracking-widest">Projects</h2>
+            <div className="section-heading">
+              <h2 className="font-bold uppercase tracking-widest">Projects</h2>
+            </div>
             {projects.map((project) => (
               <article
                 key={project.title}
