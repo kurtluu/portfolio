@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import type { PointerEvent } from "react";
 import hclTechLogo from "./assets/HCLTech-logo.svg";
 import microsoftLogo from "./assets/msft-logo.svg";
@@ -155,8 +155,6 @@ function App() {
 
     return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
   });
-  const year = useMemo(() => new Date().getFullYear(), []);
-
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     window.localStorage.setItem("theme", theme);
