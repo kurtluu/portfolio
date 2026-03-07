@@ -279,13 +279,12 @@ function App() {
               how I approach architecture, performance, and maintainability.
             </p>
             <p>
-              Today, I'm focused on mastering modern frontend technologies - React, TypeScript, and component-driven
-              development - with a strong interest in design systems and building products that feel intuitive and
-              refined.
+              Today, I'm focused on exploring AI and LLM technologies — including prompt engineering and applied AI workflows — while 
+              continuing to build modern frontend applications.
             </p>
             <p>
-              When I'm not coding, you'll catch me on the mats training Brazilian jiu-jitsu, working out in my garage gym, playing tennis,
-              snowboarding, mixing music or gaming.
+              When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or working out in my garage gym. I also enjoy playing tennis,
+              snowboarding, mixing music and gaming.
             </p>
           </section>
 
