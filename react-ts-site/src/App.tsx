@@ -71,7 +71,7 @@ const projects: Project[] = [
     title: "Personal Portfolio",
     description:
       "My personal portfolio site featuring responsive sections, theme switching, and custom UI styling focused on clean UX and performance.",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "CSS"],
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "CSS", "Vercel"],
   },
 ];
 
