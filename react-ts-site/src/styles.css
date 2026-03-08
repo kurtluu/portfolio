@@ -246,6 +246,10 @@ h1 {
   scroll-margin-top: 1.2rem;
 }
 
+.about-section {
+  --about-accent: #f59e0b;
+}
+
 .projects-section {
   --projects-accent: #8b5cf6;
   --projects-chip: color-mix(in srgb, var(--projects-accent) 20%, transparent);
@@ -258,6 +262,14 @@ h2 {
 
 .section-heading h2 {
   margin: 0;
+}
+
+.about-section h2 {
+  color: var(--about-accent);
+}
+
+.about-section .section-heading {
+  margin-bottom: 1.5rem;
 }
 
 p {
@@ -449,6 +461,7 @@ h3 {
   align-items: center;
   gap: 0.9rem;
 }
+
 
 .footer-icon-link {
   display: inline-flex;

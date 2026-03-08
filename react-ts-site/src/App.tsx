@@ -309,7 +309,7 @@ function App() {
         </aside>
 
         <main className="content">
-          <section id="about" className="content-section">
+          <section id="about" className="content-section about-section">
             <div className="section-heading">
               <h2 className="font-bold uppercase tracking-widest">About</h2>
             </div>
