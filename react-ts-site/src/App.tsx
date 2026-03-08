@@ -38,7 +38,18 @@ const timeline: TimelineItem[] = [
     logoUrl: hclTechLogo,
     description:
       "Transitioned from Microsoft to HCLTech to support platform continuity during a strategic divestiture.",
-    tags: ["JavaScript", "HTML/CSS", "Dynamics 365 CCaaS", "Copilot Studio", "Azure"],
+    tags: [
+      "JavaScript",
+      "HTML/CSS",
+      "Node.js",
+      "Business Rules",
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Azure",
+      "Dynamics 365 CCaaS",
+      "Copilot Studio",
+    ],
   },
   {
     period: "2020 - 2025",
@@ -47,7 +58,7 @@ const timeline: TimelineItem[] = [
     logoUrl: microsoftLogo,
     description:
       "Deployed web-based customer support experiences used by Fortune 500 enterprises across multiple industries, including Virtual Assistants, Live Chat, SMS, and API/SDK Integrations. Focused on building customizable user interfaces and interaction workflows that supported scalable customer communication platforms. Also collaborated with conversational AI and cross-functional teams to integrate automated assistants with live agent systems.",
-    tags: ["JavaScript", "HTML/CSS", "Node.js", "Business Rules", "Python", "REST APIs", "Azure"],
+    tags: ["JavaScript", "HTML/CSS", "Node.js", "Business Rules", "Python", "REST APIs", "SQL", "Azure"],
   },
   {
     period: "2018 - 2020",
