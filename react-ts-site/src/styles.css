@@ -64,21 +64,26 @@ body {
   top: 1.25rem;
   right: 0;
   z-index: 30;
-  border: 1px solid var(--line);
-  background: var(--bg);
+  border: 0;
+  background: linear-gradient(
+    135deg,
+    var(--toggle-green) 0%,
+    var(--toggle-blue) 48%,
+    var(--toggle-violet) 100%
+  );
   color: var(--text);
   border-radius: 999px;
   width: 2.5rem;
   height: 2.5rem;
   isolation: isolate;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   font: 500 0.75rem/1 "Fira Code", monospace;
   cursor: pointer;
-  transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 :root[data-theme="light"] .theme-toggle {
@@ -86,24 +91,13 @@ body {
   --toggle-violet: #8b5cf6;
 }
 
-.theme-toggle::before {
-  content: "";
+.theme-toggle-surface {
   position: absolute;
-  inset: -1px;
+  inset: 1px;
   border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    var(--toggle-green) 0%,
-    var(--toggle-blue) 48%,
-    var(--toggle-violet) 100%
-  );
+  background: var(--bg);
+  border: 1px solid var(--line);
   pointer-events: none;
-  opacity: 0.95;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
 }
 
 .theme-icon {

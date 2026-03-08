@@ -230,6 +230,7 @@ function App() {
           aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
         >
+          <span className="theme-toggle-surface" aria-hidden="true" />
           <span className="theme-icon" aria-hidden="true">
             <svg
               width="24"
