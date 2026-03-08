@@ -92,6 +92,8 @@ const socialLinks = [
   { href: "mailto:kurtluu12@gmail.com", label: "Email" },
 ];
 
+const getSocialLinkClassName = (label: string) => `social-link-${label.toLowerCase()}`;
+
 type Theme = "dark" | "light";
 
 function SocialIcon({ label }: { label: string }) {
@@ -293,7 +295,7 @@ function App() {
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
-                  className="social-link"
+                  className={`social-link ${getSocialLinkClassName(link.label)}`}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
@@ -401,7 +403,7 @@ function App() {
               {socialLinks.map((link) => (
                 <a
                   key={`footer-${link.label}`}
-                  className="footer-icon-link"
+                  className={`footer-icon-link ${getSocialLinkClassName(link.label)}`}
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"

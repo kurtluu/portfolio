@@ -231,6 +231,16 @@ h1 {
   color: var(--accent);
 }
 
+.socials a.social-link-github:hover,
+.footer-icon-link.social-link-github:hover {
+  color: #f59e0b;
+}
+
+.socials a.social-link-email:hover,
+.footer-icon-link.social-link-email:hover {
+  color: #8b5cf6;
+}
+
 .social-link:hover {
   transform: rotate(6deg);
 }
