@@ -210,6 +210,21 @@ h1 {
   background: var(--accent);
 }
 
+.nav-link-about:hover::before,
+.nav-link-about.active::before {
+  background: #f59e0b;
+}
+
+.nav-link-experience:hover::before,
+.nav-link-experience.active::before {
+  background: var(--accent);
+}
+
+.nav-link-projects:hover::before,
+.nav-link-projects.active::before {
+  background: #8b5cf6;
+}
+
 .socials {
   display: flex;
   gap: 1rem;

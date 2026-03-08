@@ -93,6 +93,7 @@ const socialLinks = [
 ];
 
 const getSocialLinkClassName = (label: string) => `social-link-${label.toLowerCase()}`;
+const getNavLinkClassName = (id: string) => `nav-link-${id}`;
 
 type Theme = "dark" | "light";
 
@@ -283,7 +284,7 @@ function App() {
               {navItems.map((item) => (
                 <a
                   key={item.id}
-                  className={`nav-link ${activeId === item.id ? "active" : ""}`.trim()}
+                  className={`nav-link ${getNavLinkClassName(item.id)} ${activeId === item.id ? "active" : ""}`.trim()}
                   href={`#${item.id}`}
                 >
                   {item.label}
