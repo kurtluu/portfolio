@@ -206,6 +206,10 @@ function App() {
   }, []);
 
   const handleCardPointerMove = (event: PointerEvent<HTMLElement>) => {
+    if (event.pointerType && event.pointerType !== "mouse") {
+      return;
+    }
+
     const card = event.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = event.clientX - rect.left;

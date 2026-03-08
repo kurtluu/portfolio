@@ -417,11 +417,16 @@ p {
   box-shadow: var(--shadow);
 }
 
-.timeline-item:hover::before,
 .timeline-item:focus-within::before,
-.project-card:hover::before,
 .project-card:focus-within::before {
   opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .timeline-item:hover::before,
+  .project-card:hover::before {
+    opacity: 1;
+  }
 }
 
 .projects-section h2 {
