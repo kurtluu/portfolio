@@ -77,8 +77,35 @@ body {
 }
 
 .theme-icon {
-  font-size: 1.05rem;
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
+}
+
+.theme-icon-svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  transform: scale(1) rotate(0deg);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.theme-icon-svg-sun {
+  transform: scale(1) rotate(0deg);
+}
+
+.theme-icon-svg-hidden-moon {
+  opacity: 0;
+  transform: scale(0) rotate(-90deg);
+}
+
+.theme-icon-svg-hidden-sun {
+  opacity: 0;
+  transform: scale(0) rotate(90deg);
 }
 
 .theme-toggle:hover {
