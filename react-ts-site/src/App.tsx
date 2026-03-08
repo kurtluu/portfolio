@@ -37,7 +37,7 @@ const timeline: TimelineItem[] = [
     company: "HCLTech",
     logoUrl: hclTechLogo,
     description:
-      "Transitioned from Microsoft to HCLTech to support platform continuity during a strategic divestiture.",
+      "Transitioned from Microsoft to HCLTech to ensure platform continuity, supporting integration of Dynamics 365 Contact Center and Copilot Studio for enterprise customer engagement workflows.",
     tags: [
       "JavaScript",
       "HTML/CSS",
