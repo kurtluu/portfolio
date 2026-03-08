@@ -373,7 +373,7 @@ function App() {
             ))}
           </section>
 
-          <section id="projects" className="content-section">
+          <section id="projects" className="content-section projects-section">
             <div className="section-heading">
               <h2 className="font-bold uppercase tracking-widest">Projects</h2>
             </div>
