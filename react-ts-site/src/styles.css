@@ -419,6 +419,11 @@ h3 {
     min-height: auto;
   }
 
+  .socials {
+    width: 100%;
+    justify-content: center;
+  }
+
   .section-heading {
     position: sticky;
     top: 0;
@@ -445,7 +450,16 @@ h3 {
   }
 
   .footer {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+
+  .footer-icons {
+    width: 100%;
+    justify-content: center;
   }
 }
