@@ -14,6 +14,8 @@
   --period: rgb(244 244 245 / var(--tw-text-opacity, 1));
   --glow-a: rgba(245, 158, 11, 0.16);
   --glow-b: rgba(79, 120, 255, 0.12);
+  --about-accent: #f9a66f;
+  --github-accent: #f9a66f;
 }
 
 :root[data-theme="light"] {
@@ -29,6 +31,8 @@
   --period: #3b4a6e;
   --glow-a: rgba(67, 142, 216, 0.2);
   --glow-b: rgba(180, 83, 9, 0.14);
+  --about-accent: #de7f57;
+  --github-accent: #de7f57;
 }
 
 * {
@@ -57,7 +61,7 @@ body {
 }
 
 .theme-toggle {
-  --toggle-green: #22c55e;
+  --toggle-green: #f9a66f;
   --toggle-blue: var(--accent);
   --toggle-violet: #a78bfa;
   position: absolute;
@@ -87,7 +91,7 @@ body {
 }
 
 :root[data-theme="light"] .theme-toggle {
-  --toggle-green: #15803d;
+  --toggle-green: #de7f57;
   --toggle-violet: #8b5cf6;
 }
 
@@ -238,12 +242,12 @@ h1 {
 
 .nav-link-about:hover::before,
 .nav-link-about.active::before {
-  background: #22c55e;
+  background: var(--about-accent);
 }
 
 :root[data-theme="light"] .nav-link-about:hover::before,
 :root[data-theme="light"] .nav-link-about.active::before {
-  background: #15803d;
+  background: var(--about-accent);
 }
 
 .nav-link-experience:hover::before,
@@ -284,12 +288,12 @@ h1 {
 
 .socials a.social-link-github:hover,
 .footer-icon-link.social-link-github:hover {
-  color: #22c55e;
+  color: var(--github-accent);
 }
 
 :root[data-theme="light"] .socials a.social-link-github:hover,
 :root[data-theme="light"] .footer-icon-link.social-link-github:hover {
-  color: #15803d;
+  color: var(--github-accent);
 }
 
 .socials a.social-link-email:hover,
@@ -318,11 +322,11 @@ h1 {
 }
 
 .about-section {
-  --about-accent: #22c55e;
+  --about-accent: #f9a66f;
 }
 
 :root[data-theme="light"] .about-section {
-  --about-accent: #15803d;
+  --about-accent: #de7f57;
 }
 
 .projects-section {
