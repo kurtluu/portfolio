@@ -365,7 +365,8 @@ p {
 }
 
 .timeline-item,
-.project-card {
+.project-card,
+.about-card {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -380,7 +381,8 @@ p {
 }
 
 .timeline-item::before,
-.project-card::before {
+.project-card::before,
+.about-card::before {
   content: "";
   position: absolute;
   inset: -1px;
@@ -396,7 +398,8 @@ p {
 }
 
 .timeline-item > *,
-.project-card > * {
+.project-card > *,
+.about-card > * {
   position: relative;
   z-index: 1;
 }
@@ -414,7 +417,8 @@ p {
 }
 
 .timeline-item:hover,
-.project-card:hover {
+.project-card:hover,
+.about-card:hover {
   border-color: var(--line);
   background: color-mix(in srgb, var(--panel) 45%, transparent);
   transform: translateY(-2px);
@@ -422,15 +426,30 @@ p {
 }
 
 .timeline-item:focus-within::before,
-.project-card:focus-within::before {
+.project-card:focus-within::before,
+.about-card:focus-within::before {
   opacity: 1;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .timeline-item:hover::before,
-  .project-card:hover::before {
+  .project-card:hover::before,
+  .about-card:hover::before {
     opacity: 1;
   }
+}
+
+.about-card::before {
+  background: radial-gradient(
+    240px circle at var(--spotlight-x) var(--spotlight-y),
+    color-mix(in srgb, var(--about-accent) 28%, transparent),
+    transparent 72%
+  );
+}
+
+.about-section .about-card:hover {
+  border-color: color-mix(in srgb, var(--about-accent) 28%, var(--line));
+  background: color-mix(in srgb, var(--about-accent) 10%, var(--panel));
 }
 
 .projects-section h2 {

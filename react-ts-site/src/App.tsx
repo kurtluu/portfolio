@@ -321,6 +321,11 @@ function App() {
             <div className="section-heading">
               <h2 className="font-bold uppercase tracking-widest">About</h2>
             </div>
+            <article
+              className="about-card"
+              onPointerMove={handleCardPointerMove}
+              onPointerLeave={handleCardPointerLeave}
+            >
             <p>
               Hi, I'm Kurt! I'm a frontend-leaning software engineer driven by the idea that great software is both technically
               sound and beautifully crafted. I'm especially interested in building systems and interfaces that are
@@ -340,6 +345,7 @@ function App() {
               When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or lifting in my garage gym. I also enjoy playing tennis,
               snowboarding, mixing music and gaming.
             </p>
+            </article>
           </section>
 
           <section id="experience" className="content-section">
