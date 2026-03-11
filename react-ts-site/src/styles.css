@@ -447,11 +447,6 @@ p {
   );
 }
 
-.about-section .about-card:hover {
-  border-color: color-mix(in srgb, var(--about-accent) 28%, var(--line));
-  background: color-mix(in srgb, var(--about-accent) 10%, var(--panel));
-}
-
 .projects-section h2 {
   color: var(--projects-accent);
 }
@@ -503,11 +498,6 @@ h3 {
     color-mix(in srgb, var(--projects-accent) 28%, transparent),
     transparent 72%
   );
-}
-
-.projects-section .project-card:hover {
-  border-color: color-mix(in srgb, var(--projects-accent) 28%, var(--line));
-  background: color-mix(in srgb, var(--projects-accent) 10%, var(--panel));
 }
 
 .projects-section .project-card h3 {
