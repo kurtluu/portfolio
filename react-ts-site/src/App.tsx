@@ -4,11 +4,6 @@ import hclTechLogo from "./assets/HCLTech-logo.svg";
 import microsoftLogo from "./assets/msft-logo.svg";
 import tapLogo from "./assets/tap-logo.png";
 
-type NavItem = {
-  id: string;
-  label: string;
-};
-
 type TimelineItem = {
   period: string;
   title: string;
@@ -23,12 +18,6 @@ type Project = {
   description: string;
   tags: string[];
 };
-
-const navItems: NavItem[] = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-];
 
 const timeline: TimelineItem[] = [
   {
@@ -130,7 +119,6 @@ const sharedHighlightTerms = [
 ];
 
 const getSocialLinkClassName = (label: string) => `social-link-${label.toLowerCase()}`;
-const getNavLinkClassName = (id: string) => `nav-link-${id}`;
 
 type Theme = "dark" | "light";
 
@@ -225,7 +213,6 @@ function SocialIcon({ label }: { label: string }) {
 }
 
 function App() {
-  const [activeId, setActiveId] = useState("about");
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === "undefined") {
       return "dark";
@@ -242,37 +229,6 @@ function App() {
     document.documentElement.setAttribute("data-theme", theme);
     window.localStorage.setItem("theme", theme);
   }, [theme]);
-
-  useEffect(() => {
-    const sections = navItems
-      .map((item) => document.getElementById(item.id))
-      .filter((el): el is HTMLElement => el !== null);
-
-    if (!sections.length) {
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.45,
-        rootMargin: "-10% 0px -35% 0px",
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
-    };
-  }, []);
 
   const handleCardPointerMove = (event: PointerEvent<HTMLElement>) => {
     if (event.pointerType && event.pointerType !== "mouse") {
@@ -353,18 +309,6 @@ function App() {
                 Experienced in building scalable web applications and production-ready systems.
               </p>
             </div>
-
-            <nav id="section-nav" className="section-nav" aria-label="Section navigation">
-              {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  className={`nav-link ${getNavLinkClassName(item.id)} ${activeId === item.id ? "active" : ""}`.trim()}
-                  href={`#${item.id}`}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
 
             <div className="socials" aria-label="Social links">
               {socialLinks.map((link) => (
