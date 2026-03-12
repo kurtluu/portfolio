@@ -75,8 +75,15 @@ const timeline: TimelineItem[] = [
     title: "Jr. Software Developer · TAP Series LLC",
     company: "TAP Series LLC",
     logoUrl: tapLogo,
-    description:
-      "Developed and maintained web-based applications for an e-learning platform, building responsive interfaces and interactive training modules. Contributed across both front-end and back-end development to support new features and improve platform usability. Also helped automate several internal workflows and operational systems, including data processing pipelines, reporting tools, and document generation processes. Improved internal administrative tools and reporting systems to make them faster and easier for internal teams to use.",
+    description: [
+      "Developed full-stack web applications and data processing tools for large-scale online learning platforms serving over 1M users.",
+      "Engineered Python/Pandas data pipelines to transform Excel and XML datasets into JSON, improving data consistency and reducing manual preparation time.",
+      "Built full-stack e-learning platforms using JavaScript, PHP, MySQL, and modern web technologies, delivering responsive course systems used by large user bases.",
+      "Developed interactive learning modules using Draggable.js, implementing drag-and-drop and sortable interfaces to improve engagement.",
+      "Automated standardized PDF invoice generation using PHP, JavaScript, and LaTeX, significantly reducing manual errors and processing time.",
+      "Enhanced an Angular-based internal admin interface to improve usability and reporting workflows.",
+      "Optimized SQL queries and indexing strategies to improve reporting performance and prevent timeouts on large datasets.",
+    ],
     tags: ["JavaScript", "HTML/CSS", "PHP", "MySQL", "Python", "Angular", "AWS", "Bootstrap", "Draggable.js", "pandas"],
   },
 ];
