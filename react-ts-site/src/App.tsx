@@ -37,7 +37,7 @@ const timeline: TimelineItem[] = [
     company: "HCLTech",
     logoUrl: hclTechLogo,
     description: [
-      "- Continued development and support of enterprise digital engagement platforms following Microsoft's transition of the Nuance Enterprise Professional Services organization to HCLTech.",
+      "Continued development and support of enterprise digital engagement platforms following Microsoft's transition of the Nuance Enterprise Professional Services organization to HCLTech.",
       "- Led the global rollout of an enterprise contact-center platform supporting over 1M users across Fortune 500 logistics clients.",
       "- Engineered JavaScript-based integrations and workflow logic for contact-center systems, achieving 99.9% launch availability through monitoring, structured release processes, and deployment runbooks.",
       "- Partnered with enterprise stakeholders to scope technical work, plan sprints, and translate business requirements into actionable engineering deliverables.",
@@ -61,8 +61,13 @@ const timeline: TimelineItem[] = [
     title: "Software Engineer · Microsoft",
     company: "Microsoft",
     logoUrl: microsoftLogo,
-    description:
-      "Deployed web-based customer support experiences used by Fortune 500 enterprises across multiple industries, including Virtual Assistants, Live Chat, SMS, and API/SDK Integrations. Focused on building customizable user interfaces and interaction workflows that supported scalable customer communication platforms. Also collaborated with conversational AI and cross-functional teams to integrate automated assistants with live agent systems.",
+    description: [
+      "Worked on enterprise customer engagement and messaging systems used by global organizations. Focused on building scalable frontend interfaces and integrating them with conversational AI platforms and contact-center systems.",
+      "- Built enterprise web-chat interfaces using JavaScript, developing UI components and interaction logic deployed across Fortune 500 environments in retail, healthcare, and logistics.",
+      "- Integrated customer web applications with the Nuance Digital Engagement platform using the CEAPI REST API, enabling real-time messaging and session management between customers, virtual assistants, and live contact-center agents.",
+      "- Built a Python/Pandas CLI that automated site-tagging rule generation and validation from URLs and sitemaps, increasing tagging throughput by 35% across enterprise websites with hundreds of pages.",
+      "- Collaborated with Conversational AI and platform teams to implement intent routing, escalation workflows, and contextual data flows between virtual assistants and live agent platforms.",
+    ],
     tags: ["JavaScript", "HTML/CSS", "Node.js", "Business Rules", "Python", "REST APIs", "SQL", "Azure"],
   },
   {
