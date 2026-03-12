@@ -492,6 +492,16 @@ h3 {
   margin-top: 0.6rem;
 }
 
+.description-list {
+  margin: 0.6rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.description-list li + li {
+  margin-top: 0.5rem;
+}
+
 .projects-section .project-card::before {
   background: radial-gradient(
     240px circle at var(--spotlight-x) var(--spotlight-y),

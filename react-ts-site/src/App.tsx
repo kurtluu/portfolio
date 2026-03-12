@@ -14,7 +14,7 @@ type TimelineItem = {
   title: string;
   company: string;
   logoUrl?: string;
-  description: string;
+  description: string | string[];
   tags: string[];
 };
 
@@ -36,8 +36,13 @@ const timeline: TimelineItem[] = [
     title: "Senior Technical Lead · HCLTech",
     company: "HCLTech",
     logoUrl: hclTechLogo,
-    description:
-      "Transitioned from Microsoft to HCLTech to ensure platform continuity, supporting integration of Dynamics 365 Contact Center and Copilot Studio for enterprise customer engagement workflows.",
+    description: [
+      "- Continued development and support of enterprise digital engagement platforms following Microsoft's transition of the Nuance Enterprise Professional Services organization to HCLTech.",
+      "- Led the global rollout of an enterprise contact-center platform supporting over 1M users across Fortune 500 logistics clients.",
+      "- Engineered JavaScript-based integrations and workflow logic for contact-center systems, achieving 99.9% launch availability through monitoring, structured release processes, and deployment runbooks.",
+      "- Partnered with enterprise stakeholders to scope technical work, plan sprints, and translate business requirements into actionable engineering deliverables.",
+      "- Reduced onboarding time for engineers by creating architecture documentation, deployment guides, and mentoring engineers through their first production releases.",
+    ],
     tags: [
       "JavaScript",
       "HTML/CSS",
@@ -376,7 +381,15 @@ function App() {
                 <div className="item-body">
                   <h3>{item.title}</h3>
                   <p className="period">{item.period}</p>
-                  <p>{item.description}</p>
+                  {Array.isArray(item.description) ? (
+                    <ul className="description-list">
+                      {item.description.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{item.description}</p>
+                  )}
                   <ul className="tags">
                     {item.tags.map((tag) => (
                       <li key={tag}>{tag}</li>
