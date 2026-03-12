@@ -502,6 +502,12 @@ h3 {
   margin-top: 0.5rem;
 }
 
+.item-body strong,
+.project-card strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .projects-section .project-card::before {
   background: radial-gradient(
     240px circle at var(--spotlight-x) var(--spotlight-y),

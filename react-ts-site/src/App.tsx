@@ -109,10 +109,62 @@ const socialLinks = [
   { href: "mailto:kurtluu12@gmail.com", label: "Email" },
 ];
 
+const sharedHighlightTerms = [
+  "conversational AI",
+  "CLI",
+  "REST API",
+  "CEAPI",
+  "JSON",
+  "XML",
+  "SQL",
+  "latex",
+  "pandas",
+  "workflow logic",
+  "Fortune 500",
+  "over 1M users",
+  "Microsoft's",
+  "HCLTech",
+  "UI components",
+  "mentoring",
+  "enterprise stakeholders"
+];
+
 const getSocialLinkClassName = (label: string) => `social-link-${label.toLowerCase()}`;
 const getNavLinkClassName = (id: string) => `nav-link-${id}`;
 
 type Theme = "dark" | "light";
+
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const toCaseInsensitivePattern = (value: string) =>
+  escapeRegExp(value).replace(/[a-zA-Z]/g, (char) => `[${char.toLowerCase()}${char.toUpperCase()}]`);
+const numericHighlightPattern = "\\b\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?%|\\b\\d+(?:\\.\\d+)?[KMB]\\b|\\b\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?\\b|\\b\\d+(?:\\.\\d+)?\\b";
+
+function renderHighlightedText(text: string, keywords: string[]) {
+  const uniqueKeywords = Array.from(new Set(keywords.filter(Boolean))).sort((a, b) => b.length - a.length);
+  const caseSensitiveKeywords = ["AI", "CLI"];
+  const exactCaseKeywords = uniqueKeywords.filter((keyword) => caseSensitiveKeywords.includes(keyword));
+  const caseInsensitiveKeywords = uniqueKeywords.filter((keyword) => !caseSensitiveKeywords.includes(keyword));
+
+  if (!uniqueKeywords.length) {
+    return text;
+  }
+
+  const patternParts = [
+    ...exactCaseKeywords.map(escapeRegExp),
+    ...caseInsensitiveKeywords.map(toCaseInsensitivePattern),
+    numericHighlightPattern,
+  ];
+  const matcher = new RegExp(`(${patternParts.join("|")})`, "g");
+  const parts = text.split(matcher);
+
+  return parts.map((part, index) => {
+    const isExactCaseMatch = exactCaseKeywords.includes(part);
+    const isCaseInsensitiveMatch = caseInsensitiveKeywords.some((keyword) => keyword.toLowerCase() === part.toLowerCase());
+    const isNumericMatch = new RegExp(`^${numericHighlightPattern}$`).test(part);
+    const isMatch = isExactCaseMatch || isCaseInsensitiveMatch || isNumericMatch;
+    return isMatch ? <strong key={`${part}-${index}`}>{part}</strong> : part;
+  });
+}
 
 function SocialIcon({ label }: { label: string }) {
   if (label === "GitHub") {
@@ -370,45 +422,51 @@ function App() {
               <h2 className="font-bold uppercase tracking-widest">Experience</h2>
             </div>
             {timeline.map((item) => (
-              <article
-                key={item.title}
-                className="timeline-item"
-                onPointerMove={handleCardPointerMove}
-                onPointerLeave={handleCardPointerLeave}
-              >
-                <div className="timeline-logo-wrap" aria-hidden="true">
-                  {item.logoUrl ? (
-                    <img className="timeline-logo" src={item.logoUrl} alt="" loading="lazy" />
-                  ) : (
-                    <span className="timeline-logo-fallback">
-                      {item.company
-                        .split(" ")
-                        .map((part) => part[0])
-                        .join("")
-                        .slice(0, 2)
-                        .toUpperCase()}
-                    </span>
-                  )}
-                </div>
-                <div className="item-body">
-                  <h3>{item.title}</h3>
-                  <p className="period">{item.period}</p>
-                  {Array.isArray(item.description) ? (
-                    <ul className="description-list">
-                      {item.description.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p>{item.description}</p>
-                  )}
-                  <ul className="tags">
-                    {item.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+              (() => {
+                const highlightTerms = [...item.tags, ...sharedHighlightTerms];
+
+                return (
+                  <article
+                    key={item.title}
+                    className="timeline-item"
+                    onPointerMove={handleCardPointerMove}
+                    onPointerLeave={handleCardPointerLeave}
+                  >
+                    <div className="timeline-logo-wrap" aria-hidden="true">
+                      {item.logoUrl ? (
+                        <img className="timeline-logo" src={item.logoUrl} alt="" loading="lazy" />
+                      ) : (
+                        <span className="timeline-logo-fallback">
+                          {item.company
+                            .split(" ")
+                            .map((part) => part[0])
+                            .join("")
+                            .slice(0, 2)
+                            .toUpperCase()}
+                        </span>
+                      )}
+                    </div>
+                    <div className="item-body">
+                      <h3>{item.title}</h3>
+                      <p className="period">{item.period}</p>
+                      {Array.isArray(item.description) ? (
+                        <ul className="description-list">
+                          {item.description.map((point) => (
+                            <li key={point}>{renderHighlightedText(point.replace(/^- /, ""), highlightTerms)}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{renderHighlightedText(item.description, highlightTerms)}</p>
+                      )}
+                      <ul className="tags">
+                        {item.tags.map((tag) => (
+                          <li key={tag}>{tag}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                );
+              })()
             ))}
           </section>
 
@@ -424,7 +482,7 @@ function App() {
                 onPointerLeave={handleCardPointerLeave}
               >
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <p>{renderHighlightedText(project.description, project.tags)}</p>
                 <ul className="tags">
                   {project.tags.map((tag) => (
                     <li key={tag}>{tag}</li>
