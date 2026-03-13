@@ -436,7 +436,8 @@ h3 {
 }
 
 .item-body strong,
-.project-card strong {
+.project-card strong,
+.about-card strong {
   color: var(--text);
   font-weight: 700;
 }

@@ -83,7 +83,7 @@ const projects: Project[] = [
     description:
       "Web app for searching songs and converting them into downloadable audio. View and download individual tracks, process Spotify or Soundcloud playlists into matched songs, and export as ZIP files of MP3s with metadata tagging.",
     tags: ["React", "Next.js", "Node.js", "Spotify API", "Soundcloud API"],
-  },  
+  },
   {
     title: "Personal Portfolio",
     description:
@@ -115,7 +115,31 @@ const sharedHighlightTerms = [
   "HCLTech",
   "UI components",
   "mentoring",
-  "enterprise stakeholders"
+  "enterprise stakeholders",
+];
+
+const aboutHighlightTerms = [
+  "frontend",
+  "software engineer",
+  "technically",
+  "systems",
+  "interfaces",
+  "scalable",
+  "accessible",
+  "global deployments",
+  "enterprise clients",
+  "automation tools",
+  "cross-functional teams",
+  "distributed systems",
+  "production environments",
+  "architecture",
+  "performance",
+  "maintainability",
+  "AI",
+  "LLM",
+  "prompt engineering",
+  "applied AI workflows",
+  "frontend applications",
 ];
 
 const getSocialLinkClassName = (label: string) => `social-link-${label.toLowerCase()}`;
@@ -129,7 +153,7 @@ const numericHighlightPattern = "\\b\\d{1,3}(?:,\\d{3})*(?:\\.\\d+)?%|\\b\\d+(?:
 
 function renderHighlightedText(text: string, keywords: string[]) {
   const uniqueKeywords = Array.from(new Set(keywords.filter(Boolean))).sort((a, b) => b.length - a.length);
-  const caseSensitiveKeywords = ["AI", "CLI"];
+  const caseSensitiveKeywords = ["AI", "CLI", "LLM"];
   const exactCaseKeywords = uniqueKeywords.filter((keyword) => caseSensitiveKeywords.includes(keyword));
   const caseInsensitiveKeywords = uniqueKeywords.filter((keyword) => !caseSensitiveKeywords.includes(keyword));
 
@@ -225,6 +249,7 @@ function App() {
 
     return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
   });
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     window.localStorage.setItem("theme", theme);
@@ -339,25 +364,28 @@ function App() {
               onPointerMove={handleCardPointerMove}
               onPointerLeave={handleCardPointerLeave}
             >
-            <p>
-              Hi, I'm Kurt! I'm a frontend-leaning software engineer driven by the idea that great software is both technically
-              sound and beautifully crafted. I'm especially interested in building systems and interfaces that are
-              scalable, accessible, and thoughtfully designed.
-            </p>
-            <p>
-              My experience includes leading global deployments for enterprise clients, developing internal automation
-              tools to improve operational efficiency, and collaborating across cross-functional teams to ship reliable
-              software at scale. Working across distributed systems and real-world production environments has shaped
-              how I approach architecture, performance, and maintainability.
-            </p>
-            <p>
-              Today, I'm focused on exploring AI and LLM technologies — including prompt engineering and applied AI workflows — while 
-              continuing to build modern frontend applications.
-            </p>
-            <p>
-              When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or lifting in my garage gym. I also enjoy playing tennis,
-              snowboarding, mixing music and gaming.
-            </p>
+              <p>
+                {renderHighlightedText(
+                  "Hi, I'm Kurt! I'm a frontend-leaning software engineer driven by the idea that great software is both technically sound and beautifully crafted. I'm especially interested in building systems and interfaces that are scalable, accessible, and thoughtfully designed.",
+                  aboutHighlightTerms
+                )}
+              </p>
+              <p>
+                {renderHighlightedText(
+                  "My experience includes leading global deployments for enterprise clients, developing internal automation tools to improve operational efficiency, and collaborating across cross-functional teams to ship reliable software at scale. Working across distributed systems and real-world production environments has shaped how I approach architecture, performance, and maintainability.",
+                  aboutHighlightTerms
+                )}
+              </p>
+              <p>
+                {renderHighlightedText(
+                  "Today, I'm focused on exploring AI and LLM technologies - including prompt engineering and applied AI workflows - while continuing to build modern frontend applications.",
+                  aboutHighlightTerms
+                )}
+              </p>
+              <p>
+                When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or lifting in my garage gym. I also enjoy playing tennis,
+                snowboarding, mixing music and gaming.
+              </p>
             </article>
           </section>
 
@@ -434,7 +462,7 @@ function App() {
                 </ul>
               </article>
             ))}
-          </section>          
+          </section>
 
           <footer className="footer">
             <p>Built with React and Tailwind CSS. Design inspired by Peter Steinberger, Yangshun Tay, and Brittany Chiang.</p>
@@ -462,5 +490,3 @@ function App() {
 }
 
 export default App;
-
-
