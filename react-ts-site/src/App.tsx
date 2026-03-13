@@ -131,10 +131,9 @@ const aboutHighlightTerms = [
   "distributed systems",
   "production environments",  
   "AI",
-  "LLM",
+  "LLM technologies",
   "prompt engineering",
   "applied AI workflows",
-  "frontend applications",
 ];
 
 const getSocialLinkClassName = (label: string) => `social-link-${label.toLowerCase()}`;
@@ -373,7 +372,7 @@ function App() {
               </p>
               <p>
                 {renderHighlightedText(
-                  "Today, I'm focused on exploring AI and LLM technologies - including prompt engineering and applied AI workflows - while continuing to build modern frontend applications.",
+                  "Today, I'm focused on exploring AI and LLM technologies - including prompt engineering and applied AI workflows - while continuing to build modern applications.",
                   aboutHighlightTerms
                 )}
               </p>
