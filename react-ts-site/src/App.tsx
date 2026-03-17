@@ -28,7 +28,7 @@ const timeline: TimelineItem[] = [
     description: [
       "- Led the rollout of a global contact-center platform supporting large-scale enterprise operations across multiple regions.",
       "- Designed and implemented automation workflows to improve routing, case handling, and agent experiences.",
-      "- Worked closely with stakeholders to translate complex business needs into structured technical solutions.",
+      "- Partnered with stakeholders to translate complex business needs into structured technical solutions.",
       "- Focused on reliability, scalability, and smooth deployment across distributed teams.",
     ],
     tags: [
@@ -384,8 +384,10 @@ function App() {
                       )}
                     </div>
                     <div className="item-body">
-                      <h3>{item.title}</h3>
-                      <p className="period">{item.period}</p>
+                      <div className="item-header">
+                        <h3>{item.title}</h3>
+                        <p className="period">{item.period}</p>
+                      </div>
                       {Array.isArray(item.description) ? (
                         <ul className="description-list">
                           {item.description.map((point) => (
