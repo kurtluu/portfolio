@@ -26,11 +26,10 @@ const timeline: TimelineItem[] = [
     company: "HCLTech",
     logoUrl: hclTechLogo,
     description: [
-      "Continued development and support of enterprise digital engagement platforms following Microsoft's transition of the Nuance Enterprise Professional Services organization to HCLTech.",
-      "- Led the global rollout of an enterprise contact-center platform supporting over 1M users across Fortune 500 logistics clients.",
-      "- Engineered JavaScript-based integrations and workflow logic for contact-center systems, achieving 99.9% launch availability through monitoring, structured release processes, and deployment runbooks.",
-      "- Partnered with enterprise stakeholders to scope technical work, plan sprints, and translate business requirements into actionable engineering deliverables.",
-      "- Reduced onboarding time for engineers by creating architecture documentation, deployment guides, and mentoring engineers through their first production releases.",
+      "- Led the rollout of a global contact-center platform supporting large-scale enterprise operations across multiple regions.",
+      "- Designed and implemented automation workflows to improve routing, case handling, and agent experiences.",
+      "- Worked closely with stakeholders to translate complex business needs into structured technical solutions.",
+      "- Focused on reliability, scalability, and smooth deployment across distributed teams.",
     ],
     tags: [
       "JavaScript",
