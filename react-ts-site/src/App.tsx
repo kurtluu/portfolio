@@ -383,16 +383,12 @@ function App() {
               <h2 className="font-bold uppercase tracking-widest">Experience</h2>
             </div>
             {timeline.map((item) => (
-              (() => {
-                const highlightTerms = [...item.tags, ...sharedHighlightTerms];
-
-                return (
-                  <article
-                    key={item.title}
-                    className="timeline-item"
-                    onPointerMove={handleCardPointerMove}
-                    onPointerLeave={handleCardPointerLeave}
-                  >
+              <article
+                key={item.title}
+                className="timeline-item"
+                onPointerMove={handleCardPointerMove}
+                onPointerLeave={handleCardPointerLeave}
+              >
                     <div className="timeline-logo-wrap" aria-hidden="true">
                       {item.logoUrl ? (
                         <img className="timeline-logo" src={item.logoUrl} alt="" loading="lazy" />
@@ -413,11 +409,11 @@ function App() {
                       {Array.isArray(item.description) ? (
                         <ul className="description-list">
                           {item.description.map((point) => (
-                            <li key={point}>{renderHighlightedText(point.replace(/^- /, ""), highlightTerms)}</li>
+                            <li key={point}>{point.replace(/^- /, "")}</li>
                           ))}
                         </ul>
                       ) : (
-                        <p>{renderHighlightedText(item.description, highlightTerms)}</p>
+                        <p>{item.description}</p>
                       )}
                       <ul className="tags">
                         {item.tags.map((tag) => (
@@ -426,8 +422,6 @@ function App() {
                       </ul>
                     </div>
                   </article>
-                );
-              })()
             ))}
           </section>
 
