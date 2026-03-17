@@ -93,26 +93,6 @@ const socialLinks = [
   { href: "mailto:kurtluu12@gmail.com", label: "Email" },
 ];
 
-const sharedHighlightTerms = [
-  "conversational AI",
-  "CLI",
-  "REST API",
-  "CEAPI",
-  "JSON",
-  "XML",
-  "SQL",
-  "latex",
-  "pandas",
-  "workflow logic",
-  "Fortune 500",
-  "over 1M users",
-  "Microsoft's",
-  "HCLTech",
-  "UI components",
-  "mentoring",
-  "enterprise stakeholders",
-];
-
 const aboutHighlightTerms = [
   "frontend-leaning",
   "software engineer",
