@@ -484,7 +484,7 @@ h3 {
 }
 
 .projects-section .project-card h3 {
-  color: color-mix(in srgb, var(--projects-accent) 40%, var(--text));
+  color: var(--text);
 }
 
 .projects-section .project-card:hover h3,
