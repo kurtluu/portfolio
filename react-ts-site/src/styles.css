@@ -408,6 +408,12 @@ h3 {
   margin: 0;
   font-size: 1rem;
   color: var(--text);
+  transition: color 0.22s ease;
+}
+
+.timeline-item:hover h3,
+.timeline-item:focus-visible h3 {
+  color: var(--accent);
 }
 
 .timeline-logo-wrap {
