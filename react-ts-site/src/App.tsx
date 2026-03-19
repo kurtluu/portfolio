@@ -8,6 +8,7 @@ type TimelineItem = {
   period: string;
   title: string;
   company: string;
+  companyUrl?: string;
   logoUrl?: string;
   description: string | string[];
   tags: string[];
@@ -24,6 +25,7 @@ const timeline: TimelineItem[] = [
     period: "MAR - OCT 2025",
     title: "Senior Technical Lead · HCLTech",
     company: "HCLTech",
+    companyUrl: "https://www.hcltech.com/",
     logoUrl: hclTechLogo,
     description: [
       "- Led the rollout of a global contact-center platform supporting large-scale enterprise operations across multiple regions.",
@@ -48,6 +50,7 @@ const timeline: TimelineItem[] = [
     period: "2020 - 2025",
     title: "Software Engineer · Microsoft",
     company: "Microsoft",
+    companyUrl: "https://www.microsoft.com/en-us",
     logoUrl: microsoftLogo,
     description: [
       "- Built and scaled customer-facing chat experiences used across a wide range of enterprise environments.",
@@ -61,6 +64,7 @@ const timeline: TimelineItem[] = [
     period: "2018 - 2020",
     title: "Jr. Software Developer · TAP Series LLC",
     company: "TAP Series LLC",
+    companyUrl: "https://tapseries.io/",
     logoUrl: tapLogo,
     description: [
       "- Developed full-stack web applications focused on interactive learning and user engagement.",
@@ -363,47 +367,51 @@ function App() {
               <h2 className="font-bold uppercase tracking-widest">Experience</h2>
             </div>
             {timeline.map((item) => (
-              <article
+              <a
                 key={item.title}
                 className="timeline-item"
+                href={item.companyUrl}
+                target="_blank"
+                rel="noreferrer"
                 onPointerMove={handleCardPointerMove}
                 onPointerLeave={handleCardPointerLeave}
+                aria-label={`${item.title} at ${item.company}`}
               >
-                    <div className="timeline-logo-wrap" aria-hidden="true">
-                      {item.logoUrl ? (
-                        <img className="timeline-logo" src={item.logoUrl} alt="" loading="lazy" />
-                      ) : (
-                        <span className="timeline-logo-fallback">
-                          {item.company
-                            .split(" ")
-                            .map((part) => part[0])
-                            .join("")
-                            .slice(0, 2)
-                            .toUpperCase()}
-                        </span>
-                      )}
-                    </div>
-                    <div className="item-body">
-                      <div className="item-header">
-                        <h3>{item.title}</h3>
-                        <p className="period">{item.period}</p>
-                      </div>
-                      {Array.isArray(item.description) ? (
-                        <ul className="description-list">
-                          {item.description.map((point) => (
-                            <li key={point}>{point.replace(/^- /, "")}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p>{item.description}</p>
-                      )}
-                      <ul className="tags">
-                        {item.tags.map((tag) => (
-                          <li key={tag}>{tag}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </article>
+                <div className="timeline-logo-wrap" aria-hidden="true">
+                  {item.logoUrl ? (
+                    <img className="timeline-logo" src={item.logoUrl} alt="" loading="lazy" />
+                  ) : (
+                    <span className="timeline-logo-fallback">
+                      {item.company
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase()}
+                    </span>
+                  )}
+                </div>
+                <div className="item-body">
+                  <div className="item-header">
+                    <h3>{item.title}</h3>
+                    <p className="period">{item.period}</p>
+                  </div>
+                  {Array.isArray(item.description) ? (
+                    <ul className="description-list">
+                      {item.description.map((point) => (
+                        <li key={point}>{point.replace(/^- /, "")}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{item.description}</p>
+                  )}
+                  <ul className="tags">
+                    {item.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
+                    ))}
+                  </ul>
+                </div>
+              </a>
             ))}
           </section>
 

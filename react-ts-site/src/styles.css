@@ -338,6 +338,7 @@ p {
 }
 
 .timeline-item {
+  text-decoration: none;
   display: grid;
   grid-template-columns: 50px minmax(0, 1fr);
   gap: 0.9rem;
@@ -360,6 +361,13 @@ p {
   border-color: var(--line);
   background: color-mix(in srgb, var(--panel) 45%, transparent);
   transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.timeline-item:focus-visible {
+  outline: none;
+  border-color: var(--line);
+  background: color-mix(in srgb, var(--panel) 45%, transparent);
   box-shadow: var(--shadow);
 }
 
