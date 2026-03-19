@@ -345,6 +345,11 @@ p {
   align-items: start;
 }
 
+.project-card {
+  text-decoration: none;
+  display: block;
+}
+
 .item-header {
   display: flex;
   flex-direction: column;
@@ -365,6 +370,13 @@ p {
 }
 
 .timeline-item:focus-visible {
+  outline: none;
+  border-color: var(--line);
+  background: color-mix(in srgb, var(--panel) 45%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.project-card:focus-visible {
   outline: none;
   border-color: var(--line);
   background: color-mix(in srgb, var(--panel) 45%, transparent);
@@ -473,6 +485,11 @@ h3 {
 
 .projects-section .project-card h3 {
   color: color-mix(in srgb, var(--projects-accent) 40%, var(--text));
+}
+
+.projects-section .project-card:hover h3,
+.projects-section .project-card:focus-visible h3 {
+  color: var(--projects-accent);
 }
 
 .tags {

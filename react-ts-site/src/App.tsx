@@ -16,6 +16,7 @@ type TimelineItem = {
 
 type Project = {
   title: string;
+  href?: string;
   description: string;
   tags: string[];
 };
@@ -79,12 +80,14 @@ const timeline: TimelineItem[] = [
 const projects: Project[] = [
   {
     title: "Playlist-dl",
+    href: "https://github.com/kurtluu/playlist-dl",
     description:
       "Web app for searching songs and converting them into downloadable audio. View and download individual tracks, process Spotify or Soundcloud playlists into matched songs, and export as ZIP files of MP3s with metadata tagging.",
     tags: ["React", "Next.js", "Node.js", "Spotify API", "Soundcloud API"],
   },
   {
     title: "Personal Portfolio",
+    href: "https://github.com/kurtluu/portfolio",
     description:
       "My personal portfolio site featuring responsive sections, theme switching, and custom UI styling focused on clean UX and performance.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "CSS", "Vercel"],
@@ -420,11 +423,15 @@ function App() {
               <h2 className="font-bold uppercase tracking-widest">Projects</h2>
             </div>
             {projects.map((project) => (
-              <article
+              <a
                 key={project.title}
                 className="project-card"
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
                 onPointerMove={handleCardPointerMove}
                 onPointerLeave={handleCardPointerLeave}
+                aria-label={`${project.title} project repository`}
               >
                 <h3>{project.title}</h3>
                 <p>{renderHighlightedText(project.description, project.tags)}</p>
@@ -433,7 +440,7 @@ function App() {
                     <li key={tag}>{tag}</li>
                   ))}
                 </ul>
-              </article>
+              </a>
             ))}
           </section>
 
