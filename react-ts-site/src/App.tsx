@@ -82,7 +82,7 @@ const timeline: TimelineItem[] = [
   },
   {
     period: "2018 - 2020",
-    title: "Jr. Software Developer · TAP Series LLC",
+    title: "Software Developer · TAP Series LLC",
     company: "TAP Series LLC",
     companyUrl: "https://tapseries.io/",
     logoUrl: tapLogo,
