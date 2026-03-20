@@ -598,7 +598,7 @@ function App() {
               <h2 className="font-bold uppercase tracking-widest">Courses</h2>
             </div>
             <p className="courses-note">
-              I know my progress here is not especially impressive yet, but I wanted to be transparent and use this section as a little accountability/motivation system with the audience effect that my site creates for me.
+              I know my progress here is not especially impressive yet, but I wanted to be transparent and use this section as an accountability/motivation system, with the audience effect that my site creates for me.
             </p>
             <div className="courses-grid">
               {courses.map((course) => (
