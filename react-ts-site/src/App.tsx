@@ -107,8 +107,9 @@ const aboutHighlightTerms = [
   "scalable",
   "accessible",
   "thoughtfully designed",
-  "global deployments",
-  "enterprise clients",
+  "leading global deployments",
+  "Fortune 500 enterprise clients",
+  "collaborating with cross-functional teams",
   "automation tools",
   "distributed systems",
   "production environments",  
@@ -116,6 +117,7 @@ const aboutHighlightTerms = [
   "LLM technologies",
   "prompt engineering",
   "applied AI workflows",
+  "ship reliable software at scale",
 ];
 
 const getSocialLinkClassName = (label: string) => `social-link-${label.toLowerCase()}`;
@@ -348,7 +350,7 @@ function App() {
               </p>
               <p>
                 {renderHighlightedText(
-                  "My experience includes leading global deployments for enterprise clients, developing internal automation tools to improve operational efficiency, and collaborating across cross-functional teams to ship reliable software at scale. Working across distributed systems and real-world production environments has shaped how I approach architecture, performance, and maintainability.",
+                  "My experience includes leading global deployments for Fortune 500 enterprise clients, developing internal automation tools to improve operational efficiency, and collaborating with cross-functional teams in order to ship reliable software at scale. Working across distributed systems and real-world production environments has shaped how I approach architecture, performance, and maintainability.",
                   aboutHighlightTerms
                 )}
               </p>
