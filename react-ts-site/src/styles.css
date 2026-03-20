@@ -62,6 +62,7 @@ body {
 
 .theme-toggle {
   --toggle-green: #22c55e;
+  --toggle-amber: #f59e0b;
   --toggle-blue: var(--accent);
   --toggle-violet: #a78bfa;
   position: absolute;
@@ -72,8 +73,9 @@ body {
   background: linear-gradient(
     135deg,
     var(--toggle-green) 0%,
-    var(--toggle-blue) 48%,
-    var(--toggle-violet) 100%
+    var(--toggle-blue) 36%,
+    var(--toggle-violet) 70%,
+    var(--toggle-amber) 100%
   );
   color: var(--text);
   border-radius: 999px;
@@ -92,6 +94,7 @@ body {
 
 :root[data-theme="light"] .theme-toggle {
   --toggle-green: #15803d;
+  --toggle-amber: #d97706;
   --toggle-violet: #8b5cf6;
 }
 
