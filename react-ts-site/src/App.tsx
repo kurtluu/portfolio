@@ -151,6 +151,22 @@ const courses: Course[] = [
       ],
     },
   },
+  {
+    title: "NeetCode Blind 150",
+    progress: 22.7,
+    status: "22.7% complete",
+    description: "Using the Blind 150 roadmap to build stronger interview instincts across core patterns, problem solving, and repetition.",
+    tags: ["Blind 150", "Interview Prep", "Patterns"],
+    leetcodeStats: {
+      solvedCount: 34,
+      totalCount: 150,
+      solved: [
+        { label: "Hard", shortLabel: "Hard", count: 0, total: 21, colorClassName: "leetcode-hard" },
+        { label: "Medium", shortLabel: "Med.", count: 18, total: 101, colorClassName: "leetcode-medium" },
+        { label: "Easy", shortLabel: "Easy", count: 16, total: 28, colorClassName: "leetcode-easy" },
+      ],
+    },
+  },
 ];
 
 const socialLinks = [
