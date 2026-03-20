@@ -174,6 +174,7 @@ const aboutHighlightTerms = [
   "production environments",  
   "AI",
   "LLM technologies",
+  "build modern applications",
   "prompt engineering",
   "applied AI workflows",
   "ship reliable software at scale",
