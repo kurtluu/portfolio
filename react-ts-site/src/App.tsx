@@ -606,7 +606,7 @@ function App() {
                 >
                   <div className="course-card-header">
                     <h3>{course.title}</h3>
-                    <span className="course-progress-value">{course.status}</span>
+                    {!course.leetcodeStats ? <span className="course-progress-value">{course.status}</span> : null}
                   </div>
                   <p>{course.description}</p>
                   {renderCourseMeter(course)}
