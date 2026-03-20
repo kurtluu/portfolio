@@ -27,6 +27,17 @@ type Course = {
   status: string;
   description: string;
   tags: string[];
+  leetcodeStats?: {
+    solvedCount: number;
+    totalCount: number;
+    solved: {
+      label: string;
+      shortLabel: string;
+      count: number;
+      total: number;
+      colorClassName: string;
+    }[];
+  };
 };
 
 const timeline: TimelineItem[] = [
@@ -130,6 +141,15 @@ const courses: Course[] = [
     status: "68% complete",
     description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
     tags: ["Algorithms", "Data Structures", "Practice"],
+    leetcodeStats: {
+      solvedCount: 58,
+      totalCount: 3874,
+      solved: [
+        { label: "Easy", shortLabel: "Easy", count: 32, total: 932, colorClassName: "leetcode-easy" },
+        { label: "Medium", shortLabel: "Med.", count: 26, total: 2027, colorClassName: "leetcode-medium" },
+        { label: "Hard", shortLabel: "Hard", count: 0, total: 915, colorClassName: "leetcode-hard" },
+      ],
+    },
   },
 ];
 
@@ -289,6 +309,93 @@ function App() {
   const handleCardPointerLeave = (event: PointerEvent<HTMLElement>) => {
     event.currentTarget.style.removeProperty("--spotlight-x");
     event.currentTarget.style.removeProperty("--spotlight-y");
+  };
+
+  const renderCourseMeter = (course: Course) => {
+    if (!course.leetcodeStats) {
+      return (
+        <div className="course-progress" aria-label={`${course.title} progress`}>
+          <div className="course-progress-track">
+            <span className="course-progress-fill" style={{ width: `${course.progress}%` }} />
+          </div>
+        </div>
+      );
+    }
+
+    const radius = 52;
+    const circumference = 2 * Math.PI * radius;
+    const gapLength = 8;
+    const totalAvailable = course.leetcodeStats.solved.reduce((sum, item) => sum + item.total, 0);
+    const usableLength = circumference - gapLength * course.leetcodeStats.solved.length;
+
+    let offset = 0;
+    const ringSegments = course.leetcodeStats.solved.map((item) => {
+      const backgroundLength = usableLength * (item.total / totalAvailable);
+      const solvedLength = backgroundLength * (item.count / item.total);
+      const segment = {
+        ...item,
+        backgroundLength,
+        solvedLength,
+        dashOffset: -offset,
+      };
+
+      offset += backgroundLength + gapLength;
+      return segment;
+    });
+
+    return (
+      <div className="leetcode-meter" aria-label={`${course.title} progress by difficulty`}>
+        <div className="leetcode-meter-ring">
+          <div className="leetcode-meter-ring-shell">
+            <svg viewBox="-4 -4 128 128" className="leetcode-meter-svg" aria-hidden="true">
+              {ringSegments.map((item) => (
+                <circle
+                  key={`${item.label}-bg`}
+                  cx="60"
+                  cy="60"
+                  r={radius}
+                  fill="none"
+                  strokeWidth="5"
+                  className={`leetcode-ring-track ${item.colorClassName}`}
+                  strokeDasharray={`${item.backgroundLength} ${circumference}`}
+                  strokeDashoffset={item.dashOffset}
+                />
+              ))}
+              {ringSegments.map((item) => (
+                <circle
+                  key={`${item.label}-fg`}
+                  cx="60"
+                  cy="60"
+                  r={radius}
+                  fill="none"
+                  strokeWidth="5"
+                  className={`leetcode-ring-progress ${item.colorClassName}`}
+                  strokeDasharray={`${item.solvedLength} ${circumference}`}
+                  strokeDashoffset={item.dashOffset}
+                />
+              ))}
+            </svg>
+          </div>
+          <div className="leetcode-meter-center">
+            <strong>
+              {course.leetcodeStats.solvedCount}
+              <small>/{course.leetcodeStats.totalCount}</small>
+            </strong>
+            <span className="leetcode-meter-status">Solved</span>
+          </div>
+        </div>
+        <div className="leetcode-breakdown">
+          {course.leetcodeStats.solved.map((item) => (
+            <div key={item.label} className={`leetcode-breakdown-item ${item.colorClassName}`}>
+              <span>{item.shortLabel}</span>
+              <strong>
+                {item.count}/{item.total}
+              </strong>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -502,11 +609,7 @@ function App() {
                     <span className="course-progress-value">{course.status}</span>
                   </div>
                   <p>{course.description}</p>
-                  <div className="course-progress" aria-label={`${course.title} progress`}>
-                    <div className="course-progress-track">
-                      <span className="course-progress-fill" style={{ width: `${course.progress}%` }} />
-                    </div>
-                  </div>
+                  {renderCourseMeter(course)}
                   <ul className="tags">
                     {course.tags.map((tag) => (
                       <li key={tag}>{tag}</li>

@@ -583,6 +583,152 @@ h3 {
   box-shadow: 0 0 18px color-mix(in srgb, var(--courses-accent) 30%, transparent);
 }
 
+.leetcode-meter {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(112px, 0.8fr);
+  gap: 1.15rem;
+  align-items: center;
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--panel) 76%, transparent);
+  border: 1px solid color-mix(in srgb, white 5%, transparent);
+}
+
+.leetcode-meter-ring {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 168px;
+}
+
+.leetcode-meter-ring-shell {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leetcode-meter-svg {
+  width: min(174px, 100%);
+  height: auto;
+  overflow: visible;
+  transform: rotate(-90deg);
+}
+
+.leetcode-ring-track,
+.leetcode-ring-progress {
+  stroke-linecap: round;
+}
+
+.leetcode-ring-track.leetcode-easy {
+  stroke: color-mix(in srgb, #22d3ee 28%, transparent);
+}
+
+.leetcode-ring-track.leetcode-medium {
+  stroke: color-mix(in srgb, #fbbf24 28%, transparent);
+}
+
+.leetcode-ring-track.leetcode-hard {
+  stroke: color-mix(in srgb, #f87171 28%, transparent);
+}
+
+.leetcode-ring-progress.leetcode-easy {
+  stroke: #22d3ee;
+}
+
+.leetcode-ring-progress.leetcode-medium {
+  stroke: #fbbf24;
+}
+
+.leetcode-ring-progress.leetcode-hard {
+  stroke: #f87171;
+}
+
+.leetcode-meter-center {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem;
+  pointer-events: none;
+}
+
+.leetcode-meter-center strong {
+  font-size: clamp(1.9rem, 4vw, 2.35rem);
+  line-height: 1;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 0.12rem;
+  font-weight: 700;
+}
+
+.leetcode-meter-center strong small {
+  margin-top: 0;
+  font-size: 0.4em;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.leetcode-meter-center span {
+  margin-top: 0.45rem;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.leetcode-meter-status::before {
+  content: "\2713";
+  margin-right: 0.3rem;
+  color: #22c55e;
+}
+
+.leetcode-breakdown {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.leetcode-breakdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  min-height: 3.55rem;
+  padding: 0.72rem 0.9rem;
+  border-radius: 0.45rem;
+  background: color-mix(in srgb, var(--bg) 22%, var(--panel));
+  border: 1px solid color-mix(in srgb, white 4%, transparent);
+}
+
+.leetcode-breakdown-item span {
+  font: 700 0.88rem/1 "Inter", sans-serif;
+}
+
+.leetcode-breakdown-item strong {
+  font-size: 1.05rem;
+  line-height: 1.1;
+  color: #f8fafc;
+}
+
+.leetcode-easy span {
+  color: #22d3ee;
+}
+
+.leetcode-medium span {
+  color: #fbbf24;
+}
+
+.leetcode-hard span {
+  color: #f87171;
+}
+
 .tags {
   list-style: none;
   margin: 0.9rem 0 0;
@@ -735,6 +881,14 @@ h3 {
   .footer {
     align-items: center;
     flex-direction: column;
+  }
+
+  .leetcode-meter {
+    grid-template-columns: 1fr;
+  }
+
+  .leetcode-meter-ring {
+    width: min(170px, 100%);
   }
 
   .footer p {
