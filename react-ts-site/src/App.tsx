@@ -115,14 +115,14 @@ const projects: Project[] = [
 
 const courses: Course[] = [
   {
-    title: "React - The Complete Guide (incl. Next.js, Redux) by Maximilian Schwarzmuller",
+    title: "React - The Complete Guide (incl. Next.js, Redux) by Maximilian Schwarzmüller",
     progress: 5.2,
     status: "5.2% complete",
     description: "Deepening my React fundamentals around component patterns, state flow, and building polished UI experiences.",
     tags: ["Components", "Hooks", "UI Patterns"],
   },
   {
-    title: "TypeScript by Maximilian Schwarzmuller",
+    title: "TypeScript by Maximilian Schwarzmüller",
     progress: 11.5,
     status: "11.5% complete",
     description: "Sharpening type-safe application design with stronger typing, reusable interfaces, and practical developer tooling.",
