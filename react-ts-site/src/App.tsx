@@ -361,8 +361,8 @@ function App() {
                 )}
               </p>
               <p>
-                When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or working out in my garage gym. I also enjoy playing tennis,
-                snowboarding, mixing music and gaming.
+                When I'm not coding, you'll likely catch me on the mats training Brazilian jiu-jitsu or working out at Luu's Lair <br></br>(my garage gym). I also enjoy playing tennis,
+                snowboarding, mixing music and gooping in Speranza.
               </p>
             </article>
           </section>
