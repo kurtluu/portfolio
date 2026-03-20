@@ -589,10 +589,10 @@ h3 {
   grid-template-columns: minmax(0, 1.2fr) minmax(112px, 0.8fr);
   gap: 1.15rem;
   align-items: center;
-  padding: 0.95rem 1rem;
+  padding: 0.95rem 0;
   border-radius: 1rem;
-  background: color-mix(in srgb, var(--panel) 76%, transparent);
-  border: 1px solid color-mix(in srgb, white 5%, transparent);
+  background: transparent;
+  border: 0;
 }
 
 .leetcode-meter-ring {
@@ -703,8 +703,8 @@ h3 {
   min-height: 3.55rem;
   padding: 0.72rem 0.9rem;
   border-radius: 0.45rem;
-  background: color-mix(in srgb, var(--bg) 22%, var(--panel));
-  border: 1px solid color-mix(in srgb, white 4%, transparent);
+  background: color-mix(in srgb, var(--panel) 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
 }
 
 .leetcode-breakdown-item span {
