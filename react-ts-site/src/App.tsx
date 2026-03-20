@@ -21,6 +21,14 @@ type Project = {
   tags: string[];
 };
 
+type Course = {
+  title: string;
+  progress: number;
+  status: string;
+  description: string;
+  tags: string[];
+};
+
 const timeline: TimelineItem[] = [
   {
     period: "MAR - OCT 2025",
@@ -91,6 +99,37 @@ const projects: Project[] = [
     description:
       "My personal portfolio site featuring responsive sections, theme switching, and custom UI styling focused on clean UX and performance.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "CSS", "Vercel"],
+  },
+];
+
+const courses: Course[] = [
+  {
+    title: "React Course",
+    progress: 82,
+    status: "82% complete",
+    description: "Deepening my React fundamentals around component patterns, state flow, and building polished UI experiences.",
+    tags: ["Components", "Hooks", "UI Patterns"],
+  },
+  {
+    title: "TypeScript Course",
+    progress: 74,
+    status: "74% complete",
+    description: "Sharpening type-safe application design with stronger typing, reusable interfaces, and practical developer tooling.",
+    tags: ["Types", "Interfaces", "Tooling"],
+  },
+  {
+    title: "System Design Course",
+    progress: 61,
+    status: "61% complete",
+    description: "Working through scalable architecture concepts including reliability, throughput, data flow, and tradeoff analysis.",
+    tags: ["Scalability", "Architecture", "Reliability"],
+  },
+  {
+    title: "LeetCode",
+    progress: 68,
+    status: "68% complete",
+    description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
+    tags: ["Algorithms", "Data Structures", "Practice"],
   },
 ];
 
@@ -444,6 +483,38 @@ function App() {
                 </ul>
               </a>
             ))}
+          </section>
+
+          <section id="courses" className="content-section courses-section">
+            <div className="section-heading">
+              <h2 className="font-bold uppercase tracking-widest">Courses</h2>
+            </div>
+            <div className="courses-grid">
+              {courses.map((course) => (
+                <article
+                  key={course.title}
+                  className="course-card"
+                  onPointerMove={handleCardPointerMove}
+                  onPointerLeave={handleCardPointerLeave}
+                >
+                  <div className="course-card-header">
+                    <h3>{course.title}</h3>
+                    <span className="course-progress-value">{course.status}</span>
+                  </div>
+                  <p>{course.description}</p>
+                  <div className="course-progress" aria-label={`${course.title} progress`}>
+                    <div className="course-progress-track">
+                      <span className="course-progress-fill" style={{ width: `${course.progress}%` }} />
+                    </div>
+                  </div>
+                  <ul className="tags">
+                    {course.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
           </section>
 
           <footer className="footer">

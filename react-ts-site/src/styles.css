@@ -271,6 +271,15 @@ h1 {
   --projects-accent: #8b5cf6;
 }
 
+.courses-section {
+  --courses-accent: #f59e0b;
+  --courses-chip: color-mix(in srgb, var(--courses-accent) 20%, transparent);
+}
+
+:root[data-theme="light"] .courses-section {
+  --courses-accent: #d97706;
+}
+
 h2 {
   margin: 1rem 0 1.25rem;
   color: var(--accent);
@@ -299,7 +308,8 @@ p {
 
 .timeline-item,
 .project-card,
-.about-card {
+.about-card,
+.course-card {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -316,7 +326,8 @@ p {
 
 .timeline-item::before,
 .project-card::before,
-.about-card::before {
+.about-card::before,
+.course-card::before {
   content: "";
   position: absolute;
   inset: -1px;
@@ -333,7 +344,8 @@ p {
 
 .timeline-item > *,
 .project-card > *,
-.about-card > * {
+.about-card > *,
+.course-card > * {
   position: relative;
   z-index: 1;
 }
@@ -357,6 +369,13 @@ p {
   --card-highlight: color-mix(in srgb, var(--about-accent) 60%, var(--line));
 }
 
+.course-card {
+  --card-highlight: color-mix(in srgb, var(--courses-accent) 60%, var(--line));
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .item-header {
   display: flex;
   flex-direction: column;
@@ -369,7 +388,8 @@ p {
 
 .timeline-item:hover,
 .project-card:hover,
-.about-card:hover {
+.about-card:hover,
+.course-card:hover {
   border-color: var(--card-highlight);
   background: color-mix(in srgb, var(--panel) 45%, transparent);
   transform: translateY(-2px);
@@ -392,14 +412,16 @@ p {
 
 .timeline-item:focus-within::before,
 .project-card:focus-within::before,
-.about-card:focus-within::before {
+.about-card:focus-within::before,
+.course-card:focus-within::before {
   opacity: 1;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .timeline-item:hover::before,
   .project-card:hover::before,
-  .about-card:hover::before {
+  .about-card:hover::before,
+  .course-card:hover::before {
     opacity: 1;
   }
 }
@@ -414,6 +436,10 @@ p {
 
 .projects-section h2 {
   color: var(--projects-accent);
+}
+
+.courses-section h2 {
+  color: var(--courses-accent);
 }
 
 .period {
@@ -499,6 +525,64 @@ h3 {
   color: var(--projects-accent);
 }
 
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.courses-section .course-card::before {
+  background: radial-gradient(
+    240px circle at var(--spotlight-x) var(--spotlight-y),
+    color-mix(in srgb, var(--courses-accent) 30%, transparent),
+    transparent 72%
+  );
+}
+
+.course-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.course-progress-value {
+  flex-shrink: 0;
+  font: 500 0.76rem/1 "Fira Code", monospace;
+  letter-spacing: 0.02em;
+  color: var(--courses-accent);
+}
+
+.course-card p {
+  margin-top: 0.75rem;
+}
+
+.courses-section .course-card:hover h3,
+.courses-section .course-card:focus-visible h3 {
+  color: var(--courses-accent);
+}
+
+.course-progress {
+  margin-top: 1rem;
+}
+
+.course-progress-track {
+  width: 100%;
+  height: 0.72rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--courses-accent) 14%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--courses-accent) 28%, transparent);
+}
+
+.course-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--courses-accent) 78%, white), var(--courses-accent));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--courses-accent) 30%, transparent);
+}
+
 .tags {
   list-style: none;
   margin: 0.9rem 0 0;
@@ -519,6 +603,11 @@ h3 {
 .projects-section .tags li {
   background: var(--projects-chip);
   color: var(--projects-accent);
+}
+
+.courses-section .tags li {
+  background: var(--courses-chip);
+  color: var(--courses-accent);
 }
 
 .email-link {
@@ -605,6 +694,10 @@ h3 {
   .timeline-item {
     grid-template-columns: 36px minmax(0, 1fr);
     gap: 0.9rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
   }
 
   .timeline-logo-wrap {
