@@ -714,7 +714,7 @@ h3 {
 .leetcode-breakdown-item strong {
   font-size: 1.05rem;
   line-height: 1.1;
-  color: #f8fafc;
+  color: var(--text);
 }
 
 .leetcode-easy span {
@@ -727,6 +727,11 @@ h3 {
 
 .leetcode-hard span {
   color: #f87171;
+}
+
+:root[data-theme="light"] .leetcode-breakdown-item {
+  background: color-mix(in srgb, white 62%, var(--panel));
+  border-color: color-mix(in srgb, var(--line) 85%, transparent);
 }
 
 .tags {
