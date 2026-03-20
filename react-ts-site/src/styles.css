@@ -445,6 +445,12 @@ p {
   color: var(--courses-accent);
 }
 
+.courses-note {
+  margin-bottom: 1.25rem;
+  max-width: 62ch;
+  font-style: italic;
+}
+
 .period {
   margin: 0 0 0.45rem;
   font: 500 0.78rem/1 "Fira Code", monospace;

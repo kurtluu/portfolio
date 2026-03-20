@@ -116,22 +116,22 @@ const projects: Project[] = [
 const courses: Course[] = [
   {
     title: "React Course",
-    progress: 82,
-    status: "82% complete",
+    progress: 5,
+    status: "5% complete",
     description: "Deepening my React fundamentals around component patterns, state flow, and building polished UI experiences.",
     tags: ["Components", "Hooks", "UI Patterns"],
   },
   {
     title: "TypeScript Course",
-    progress: 74,
-    status: "74% complete",
+    progress: 5,
+    status: "5% complete",
     description: "Sharpening type-safe application design with stronger typing, reusable interfaces, and practical developer tooling.",
     tags: ["Types", "Interfaces", "Tooling"],
   },
   {
     title: "System Design Course",
-    progress: 61,
-    status: "61% complete",
+    progress: 5,
+    status: "5% complete",
     description: "Working through scalable architecture concepts including reliability, throughput, data flow, and tradeoff analysis.",
     tags: ["Scalability", "Architecture", "Reliability"],
   },
@@ -597,6 +597,9 @@ function App() {
             <div className="section-heading">
               <h2 className="font-bold uppercase tracking-widest">Courses</h2>
             </div>
+            <p className="courses-note">
+              I know my progress here is not especially impressive yet, but I wanted to be transparent and use this section as a little accountability/motivation system with the audience effect that my site creates for me.
+            </p>
             <div className="courses-grid">
               {courses.map((course) => (
                 <article
