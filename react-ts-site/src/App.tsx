@@ -344,6 +344,11 @@ function App() {
       return segment;
     });
 
+    const breakdownOrder = ["Easy", "Med.", "Hard"];
+    const breakdownItems = [...course.leetcodeStats.solved].sort(
+      (a, b) => breakdownOrder.indexOf(a.shortLabel) - breakdownOrder.indexOf(b.shortLabel)
+    );
+
     return (
       <div className="leetcode-meter" aria-label={`${course.title} progress by difficulty`}>
         <div className="leetcode-meter-ring">
@@ -386,7 +391,7 @@ function App() {
           </div>
         </div>
         <div className="leetcode-breakdown">
-          {course.leetcodeStats.solved.map((item) => (
+          {breakdownItems.map((item) => (
             <div key={item.label} className={`leetcode-breakdown-item ${item.colorClassName}`}>
               <span>{item.shortLabel}</span>
               <strong>
