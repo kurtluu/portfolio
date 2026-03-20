@@ -353,6 +353,10 @@ p {
   display: block;
 }
 
+.about-card {
+  --card-highlight: color-mix(in srgb, var(--about-accent) 60%, var(--line));
+}
+
 .item-header {
   display: flex;
   flex-direction: column;
