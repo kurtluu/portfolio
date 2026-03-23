@@ -902,6 +902,8 @@ h3 {
 
   .leetcode-meter-ring {
     width: min(170px, 100%);
+    justify-self: center;
+    margin-inline: auto;
   }
 
   .footer p {
