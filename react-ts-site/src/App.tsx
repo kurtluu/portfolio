@@ -119,14 +119,14 @@ const courses: Course[] = [
     progress: 5.2,
     status: "5.2% complete",
     description: "Deepening my React fundamentals around component patterns, state flow, and building polished UI experiences.",
-    tags: ["Components", "Hooks", "UI Patterns"],
+    tags: ["React"],
   },
   {
     title: "TypeScript by Maximilian Schwarzmüller",
     progress: 11.5,
     status: "11.5% complete",
     description: "Sharpening type-safe application design with stronger typing, reusable interfaces, and practical developer tooling.",
-    tags: ["Types", "Interfaces", "Tooling"],
+    tags: ["TypeScript"],
   },
   {
     title: "System Design via Hellointerview",
