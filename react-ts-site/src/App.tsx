@@ -140,7 +140,7 @@ const courses: Course[] = [
     progress: 68,
     status: "68% complete",
     description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
-    tags: ["Algorithms", "Data Structures", "Practice"],
+    tags: ["Python", "JavaScript"],
     leetcodeStats: {
       solvedCount: 58,
       totalCount: 3874,
@@ -156,7 +156,7 @@ const courses: Course[] = [
     progress: 22.7,
     status: "22.7% complete",
     description: "Using the NeetCode 150 roadmap to build stronger interview instincts across core patterns, problem solving, and repetition.",
-    tags: ["Blind 150", "Interview Prep", "Patterns"],
+    tags: ["Python", "JavaScript"],
     leetcodeStats: {
       solvedCount: 34,
       totalCount: 150,
