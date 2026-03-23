@@ -119,7 +119,7 @@ const courses: Course[] = [
     progress: 5.2,
     status: "5.2% complete",
     description: "Deepening my React fundamentals around component patterns, state flow, and building polished UI experiences.",
-    tags: ["React"],
+    tags: ["React", "Next.js", "Redux"],
   },
   {
     title: "TypeScript by Maximilian Schwarzmüller",
