@@ -142,11 +142,11 @@ const courses: Course[] = [
     description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 58,
+      solvedCount: 59,
       totalCount: 3874,
       solved: [
         { label: "Hard", shortLabel: "Hard", count: 0, total: 915, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 26, total: 2027, colorClassName: "leetcode-medium" },
+        { label: "Medium", shortLabel: "Med.", count: 27, total: 2027, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 32, total: 932, colorClassName: "leetcode-easy" },
       ],
     },
@@ -158,11 +158,11 @@ const courses: Course[] = [
     description: "Using the NeetCode 150 roadmap to build stronger interview instincts across core patterns, problem solving, and repetition.",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 34,
+      solvedCount: 35,
       totalCount: 150,
       solved: [
         { label: "Hard", shortLabel: "Hard", count: 0, total: 21, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 18, total: 101, colorClassName: "leetcode-medium" },
+        { label: "Medium", shortLabel: "Med.", count: 19, total: 101, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 16, total: 28, colorClassName: "leetcode-easy" },
       ],
     },
