@@ -19,6 +19,7 @@ type Project = {
   href?: string;
   description: string;
   tags: string[];
+  highlightDescription?: boolean;
 };
 
 type Course = {
@@ -109,6 +110,7 @@ const projects: Project[] = [
     description:
       "AI agent project focused on tool use, multi-step task execution, and practical workflow automation for real-world developer tasks.",
     tags: ["AI", "Agents", "Automation", "TypeScript", "Node.js"],
+    highlightDescription: false,
   },
   {
     title: "Personal Portfolio",
@@ -610,7 +612,7 @@ function App() {
                 aria-label={`${project.title} project repository`}
               >
                 <h3>{project.title}</h3>
-                <p>{renderHighlightedText(project.description, project.tags)}</p>
+                <p>{project.highlightDescription === false ? project.description : renderHighlightedText(project.description, project.tags)}</p>
                 <ul className="tags">
                   {project.tags.map((tag) => (
                     <li key={tag}>{tag}</li>
