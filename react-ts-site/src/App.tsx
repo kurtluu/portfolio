@@ -105,6 +105,12 @@ const projects: Project[] = [
     tags: ["React", "Next.js", "Node.js", "Spotify API", "Soundcloud API"],
   },
   {
+    title: "OpenClaw Agent",
+    description:
+      "AI agent project focused on tool use, multi-step task execution, and practical workflow automation for real-world developer tasks.",
+    tags: ["AI", "Agents", "Automation", "TypeScript", "Node.js"],
+  },
+  {
     title: "Personal Portfolio",
     href: "https://github.com/kurtluu/portfolio",
     description:
