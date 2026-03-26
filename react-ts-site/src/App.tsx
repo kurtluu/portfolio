@@ -163,7 +163,7 @@ const courses: Course[] = [
     title: "NeetCode",
     progress: 22.7,
     status: "22.7% complete",
-    description: "Using the NeetCode 150 roadmap to build stronger interview instincts across core patterns, problem solving, and repetition.",
+    description: "Neetcode150",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
       solvedCount: 36,
