@@ -124,8 +124,8 @@ const projects: Project[] = [
 const courses: Course[] = [
   {
     title: "React - The Complete Guide (incl. Next.js, Redux) by Maximilian Schwarzmüller",
-    progress: 7.6,
-    status: "7.6% complete",
+    progress: 6.9,
+    status: "6.9% complete",
     description: "Deepening my React fundamentals around component patterns, state flow, and building polished UI experiences.",
     tags: ["React", "Next.js", "Redux"],
   },
