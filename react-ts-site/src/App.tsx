@@ -166,11 +166,11 @@ const courses: Course[] = [
     description: "Neetcode150",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 39,
+      solvedCount: 41,
       totalCount: 150,
       solved: [
         { label: "Hard", shortLabel: "Hard", count: 0, total: 21, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 23, total: 101, colorClassName: "leetcode-medium" },
+        { label: "Medium", shortLabel: "Med.", count: 25, total: 101, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 16, total: 28, colorClassName: "leetcode-easy" },
       ],
     },
