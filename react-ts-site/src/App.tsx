@@ -150,12 +150,12 @@ const courses: Course[] = [
     description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 63,
+      solvedCount: 65,
       totalCount: 3874,
       solved: [
         { label: "Hard", shortLabel: "Hard", count: 0, total: 915, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 30, total: 2027, colorClassName: "leetcode-medium" },
-        { label: "Easy", shortLabel: "Easy", count: 33, total: 932, colorClassName: "leetcode-easy" },
+        { label: "Medium", shortLabel: "Med.", count: 33, total: 2027, colorClassName: "leetcode-medium" },
+        { label: "Easy", shortLabel: "Easy", count: 32, total: 932, colorClassName: "leetcode-easy" },
       ],
     },
   },
