@@ -9,6 +9,7 @@
   --accent: lab(70.687% -23.6078 -45.9483);
   --line: rgba(136, 146, 176, 0.25);
   --chip: color-mix(in srgb, var(--accent) 22%, transparent);
+  --card-surface-hover: rgba(63, 63, 70, 0.28);
   --radius: 12px;
   --shadow: 0 12px 30px rgba(2, 12, 27, 0.45);
   --period: rgb(244 244 245 / var(--tw-text-opacity, 1));
@@ -27,6 +28,7 @@
   --accent: #006cac;
   --line: rgba(20, 33, 61, 0.2);
   --chip: color-mix(in srgb, var(--accent) 18%, transparent);
+  --card-surface-hover: rgba(255, 255, 255, 0.42);
   --shadow: 0 10px 24px rgba(20, 33, 61, 0.14);
   --period: #3b4a6e;
   --glow-a: rgba(67, 142, 216, 0.2);
@@ -395,26 +397,26 @@ p {
 .project-card:hover,
 .about-card:hover,
 .course-card:hover {
-  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  background: var(--card-surface-hover);
   transform: translateY(-2px);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 88%, transparent), var(--shadow);
 }
 
 .timeline-item:focus-visible {
   outline: none;
-  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  background: var(--card-surface-hover);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 92%, transparent), var(--shadow);
 }
 
 .about-card:focus-visible,
 .course-card:focus-within {
-  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  background: var(--card-surface-hover);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 92%, transparent), var(--shadow);
 }
 
 .project-card:focus-visible {
   outline: none;
-  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  background: var(--card-surface-hover);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 92%, transparent), var(--shadow);
 }
 
