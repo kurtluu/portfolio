@@ -321,10 +321,12 @@ p {
   --card-highlight: var(--line);
   border: 1px solid transparent;
   background: transparent;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-radius: var(--radius);
   padding: 1rem;
   margin: 0 -1rem;
-  transition: border-color 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+  transition: background-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
 }
 
 .timeline-item::before,
@@ -393,24 +395,27 @@ p {
 .project-card:hover,
 .about-card:hover,
 .course-card:hover {
-  border-color: var(--card-highlight);
-  background: color-mix(in srgb, var(--panel) 45%, transparent);
+  background: color-mix(in srgb, var(--panel) 32%, transparent);
   transform: translateY(-2px);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-highlight) 38%, transparent), var(--shadow);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 88%, transparent), var(--shadow);
 }
 
 .timeline-item:focus-visible {
   outline: none;
-  border-color: var(--card-highlight);
-  background: color-mix(in srgb, var(--panel) 45%, transparent);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-highlight) 38%, transparent), var(--shadow);
+  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 92%, transparent), var(--shadow);
+}
+
+.about-card:focus-visible,
+.course-card:focus-within {
+  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 92%, transparent), var(--shadow);
 }
 
 .project-card:focus-visible {
   outline: none;
-  border-color: var(--card-highlight);
-  background: color-mix(in srgb, var(--panel) 45%, transparent);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-highlight) 38%, transparent), var(--shadow);
+  background: color-mix(in srgb, var(--panel) 32%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 92%, transparent), var(--shadow);
 }
 
 .timeline-item:focus-within::before,
