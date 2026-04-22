@@ -200,7 +200,6 @@ const socialLinks = [
 ];
 
 const aboutHighlightTerms = [
-  "frontend-leaning",
   "software engineer",
   "building systems and interfaces",
   "scalable",
@@ -536,7 +535,7 @@ function App() {
             >
               <p>
                 {renderHighlightedText(
-                  "Hi, I'm Kurt! I'm a frontend-leaning software engineer driven by the idea that great software is both technically sound and aethetically crafted. I'm especially interested in building systems and interfaces that are scalable, accessible, and thoughtfully designed.",
+                  "Hi, I'm Kurt! I'm a software engineer driven by the idea that great software is both technically sound and aethetically crafted. I'm especially interested in building systems and interfaces that are scalable, accessible, and thoughtfully designed.",
                   aboutHighlightTerms
                 )}
               </p>
