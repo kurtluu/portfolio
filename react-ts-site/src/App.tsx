@@ -150,12 +150,12 @@ const courses: Course[] = [
     description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 66,
+      solvedCount: 68,
       totalCount: 3874,
       solved: [
-        { label: "Hard", shortLabel: "Hard", count: 0, total: 915, colorClassName: "leetcode-hard" },
+        { label: "Hard", shortLabel: "Hard", count: 1, total: 915, colorClassName: "leetcode-hard" },
         { label: "Medium", shortLabel: "Med.", count: 34, total: 2027, colorClassName: "leetcode-medium" },
-        { label: "Easy", shortLabel: "Easy", count: 32, total: 932, colorClassName: "leetcode-easy" },
+        { label: "Easy", shortLabel: "Easy", count: 33, total: 932, colorClassName: "leetcode-easy" },
       ],
     },
   },
@@ -166,11 +166,11 @@ const courses: Course[] = [
     description: "Blind75",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 31,
+      solvedCount: 33,
       totalCount: 75,
       solved: [
-        { label: "Hard", shortLabel: "Hard", count: 0, total: 7, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 18, total: 49, colorClassName: "leetcode-medium" },
+        { label: "Hard", shortLabel: "Hard", count: 1, total: 7, colorClassName: "leetcode-hard" },
+        { label: "Medium", shortLabel: "Med.", count: 19, total: 49, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 13, total: 19, colorClassName: "leetcode-easy" },
       ],
     },
@@ -182,11 +182,11 @@ const courses: Course[] = [
     description: "Neetcode150",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 42,
+      solvedCount: 44,
       totalCount: 150,
       solved: [
-        { label: "Hard", shortLabel: "Hard", count: 0, total: 21, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 26, total: 101, colorClassName: "leetcode-medium" },
+        { label: "Hard", shortLabel: "Hard", count: 1, total: 21, colorClassName: "leetcode-hard" },
+        { label: "Medium", shortLabel: "Med.", count: 27, total: 101, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 16, total: 28, colorClassName: "leetcode-easy" },
       ],
     },
