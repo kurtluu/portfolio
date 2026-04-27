@@ -166,11 +166,11 @@ const courses: Course[] = [
     description: "Blind75",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 33,
+      solvedCount: 34,
       totalCount: 75,
       solved: [
         { label: "Hard", shortLabel: "Hard", count: 1, total: 7, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 19, total: 49, colorClassName: "leetcode-medium" },
+        { label: "Medium", shortLabel: "Med.", count: 20, total: 49, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 13, total: 19, colorClassName: "leetcode-easy" },
       ],
     },
@@ -182,11 +182,11 @@ const courses: Course[] = [
     description: "Neetcode150",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 44,
+      solvedCount: 46,
       totalCount: 150,
       solved: [
         { label: "Hard", shortLabel: "Hard", count: 1, total: 21, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 27, total: 101, colorClassName: "leetcode-medium" },
+        { label: "Medium", shortLabel: "Med.", count: 29, total: 101, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 16, total: 28, colorClassName: "leetcode-easy" },
       ],
     },
