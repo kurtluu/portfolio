@@ -145,7 +145,7 @@ const courses: Course[] = [
   },
   {
     title: "LeetCode",
-    progress: 69,
+    progress: 70,
     status: "68% complete",
     description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
     tags: ["Python", "JavaScript"],
@@ -182,11 +182,11 @@ const courses: Course[] = [
     description: "Neetcode150",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
-      solvedCount: 47,
+      solvedCount: 49,
       totalCount: 150,
       solved: [
         { label: "Hard", shortLabel: "Hard", count: 1, total: 21, colorClassName: "leetcode-hard" },
-        { label: "Medium", shortLabel: "Med.", count: 30, total: 101, colorClassName: "leetcode-medium" },
+        { label: "Medium", shortLabel: "Med.", count: 32, total: 101, colorClassName: "leetcode-medium" },
         { label: "Easy", shortLabel: "Easy", count: 16, total: 28, colorClassName: "leetcode-easy" },
       ],
     },
