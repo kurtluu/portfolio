@@ -138,8 +138,8 @@ const courses: Course[] = [
   },
   {
     title: "System Design via Hellointerview",
-    progress: 50,
-    status: "50% complete",
+    progress: 54,
+    status: "54% complete",
     description: "Working through scalable architecture concepts including reliability, throughput, data flow, and tradeoff analysis.",
     tags: ["Scalability", "Architecture", "Reliability"],
   },
