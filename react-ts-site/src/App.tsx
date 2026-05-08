@@ -43,7 +43,7 @@ type Course = {
 
 const timeline: TimelineItem[] = [
   {
-    period: "MAR - OCT 2025",
+    period: "2025 - 2026",
     title: "Senior Technical Lead · HCLTech",
     company: "HCLTech",
     companyUrl: "https://www.hcltech.com/",
