@@ -1003,3 +1003,40 @@ h3 {
   border-left-color: var(--courses-accent);
   opacity: 1;
 }
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 50;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--accent);
+  transform-origin: left center;
+  transition: transform 0.08s linear, background-color 0.3s ease;
+}
+
+.reading-progress-about .reading-progress-bar {
+  background: var(--about-accent);
+}
+
+.reading-progress-experience .reading-progress-bar {
+  background: var(--accent);
+}
+
+.reading-progress-projects .reading-progress-bar {
+  background: var(--projects-accent);
+}
+
+.reading-progress-courses .reading-progress-bar {
+  background: var(--courses-accent);
+}

@@ -335,6 +335,7 @@ function App() {
   });
 
   const [activeSection, setActiveSection] = useState<string>(navSections[0].id);
+  const [readingProgress, setReadingProgress] = useState<number>(0);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -352,6 +353,11 @@ function App() {
         }
       }
       setActiveSection(current);
+
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+      setReadingProgress(progress);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -471,6 +477,19 @@ function App() {
 
   return (
     <>
+      <div
+        className={`reading-progress reading-progress-${activeSection}`}
+        role="progressbar"
+        aria-label="Reading progress"
+        aria-valuenow={Math.round(readingProgress)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
+        <span
+          className="reading-progress-bar"
+          style={{ transform: `translateX(-${100 - readingProgress}%)` }}
+        />
+      </div>
       <div className="background-glow" aria-hidden="true" />
       <div className="layout container">
         <button
