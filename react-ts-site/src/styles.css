@@ -966,7 +966,7 @@ h3 {
   margin-left: -1px;
   padding: 0.3rem 0 0.3rem 0.85rem;
   text-decoration: none;
-  font: 500 0.7rem/1.4 "Fira Code", monospace;
+  font: 500 14px/1.4 "Fira Code", monospace;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
