@@ -147,7 +147,7 @@ const courses: Course[] = [
     title: "LeetCode",
     progress: 73,
     status: "68% complete",
-    description: "Staying consistent with algorithm practice to improve problem solving, speed, and confidence in technical interviews.",
+    description: "Daily reps across data structures and algorithms to sharpen pattern recognition and build fluency with classic problem-solving techniques.",
     tags: ["Python", "JavaScript"],
     leetcodeStats: {
       solvedCount: 74,
