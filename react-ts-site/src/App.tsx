@@ -735,6 +735,15 @@ function App() {
           </footer>
         </main>
         <nav className="toc" aria-label="Page sections">
+          <div
+            className={`reading-progress reading-progress-mini reading-progress-${activeSection}`}
+            aria-hidden="true"
+          >
+            <span
+              className="reading-progress-bar"
+              style={{ transform: `translateX(-${100 - readingProgress}%)` }}
+            />
+          </div>
           <ul>
             {navSections.map(({ id, label }) => (
               <li key={id}>

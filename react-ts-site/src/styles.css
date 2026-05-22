@@ -1040,3 +1040,14 @@ h3 {
 .reading-progress-courses .reading-progress-bar {
   background: var(--courses-accent);
 }
+
+.reading-progress-mini {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  z-index: auto;
+  margin-left: 15px;
+  margin-bottom: 0.65rem;
+  border-radius: 2px;
+}
