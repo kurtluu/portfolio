@@ -255,7 +255,7 @@ h1 {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 7rem;
   padding-bottom: 2rem;
 }
 
