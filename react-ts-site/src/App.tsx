@@ -539,6 +539,7 @@ function App() {
           </span>
         </button>
 
+        <div className="body-row">
         <aside className="sidebar">
           <div className="sidebar-inner">
             <div>
@@ -567,8 +568,6 @@ function App() {
             </div>
           </div>
         </aside>
-
-        <div className="body-row">
         <main className="content">
           <section id="about" className="content-section about-section">
             <div className="section-heading">

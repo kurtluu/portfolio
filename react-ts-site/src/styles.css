@@ -837,6 +837,10 @@ h3 {
     padding: 3rem 1.5rem;
   }
 
+  .body-row {
+    gap: 2.25rem;
+  }
+
   .sidebar-inner {
     min-height: auto;
   }
@@ -930,6 +934,7 @@ h3 {
 .body-row {
   display: flex;
   flex-direction: column;
+  gap: 5.75rem;
 }
 
 .toc {
@@ -940,8 +945,12 @@ h3 {
   .body-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 130px;
-    gap: 3rem;
+    gap: 5.75rem 3rem;
     align-items: start;
+  }
+
+  .body-row > .sidebar {
+    grid-column: 1 / -1;
   }
 
   .toc {
