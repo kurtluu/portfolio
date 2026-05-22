@@ -157,7 +157,7 @@ a {
 }
 
 .container {
-  width: min(860px, 92vw);
+  width: min(67.5rem, 92vw);
   margin: 0 auto;
 }
 
@@ -257,6 +257,14 @@ h1 {
   flex-direction: column;
   gap: 7rem;
   padding-bottom: 2rem;
+  width: 100%;
+  max-width: 56rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding-right: 1.5rem;
+  }
 }
 
 .content-section {
