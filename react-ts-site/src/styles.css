@@ -982,25 +982,21 @@ h3 {
 
 .toc-link-about.toc-link-active {
   color: var(--about-accent);
-  border-left-color: var(--about-accent);
   opacity: 1;
 }
 
 .toc-link-experience.toc-link-active {
   color: var(--accent);
-  border-left-color: var(--accent);
   opacity: 1;
 }
 
 .toc-link-projects.toc-link-active {
   color: var(--projects-accent);
-  border-left-color: var(--projects-accent);
   opacity: 1;
 }
 
 .toc-link-courses.toc-link-active {
   color: var(--courses-accent);
-  border-left-color: var(--courses-accent);
   opacity: 1;
 }
 
