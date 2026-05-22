@@ -17,6 +17,8 @@
   --glow-b: rgba(79, 120, 255, 0.12);
   --about-accent: #22c55e;
   --github-accent: #22c55e;
+  --projects-accent: #a78bfa;
+  --courses-accent: #f59e0b;
 }
 
 :root[data-theme="light"] {
@@ -35,6 +37,8 @@
   --glow-b: rgba(180, 83, 9, 0.14);
   --about-accent: #15803d;
   --github-accent: #15803d;
+  --projects-accent: #8b5cf6;
+  --courses-accent: #d97706;
 }
 
 * {
@@ -921,4 +925,81 @@ h3 {
     width: 100%;
     justify-content: center;
   }
+}
+
+.body-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.toc {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .body-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 130px;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .toc {
+    display: block;
+    position: sticky;
+    top: 6rem;
+    border-left: 1px solid rgba(145, 158, 171, 0.24);
+  }
+}
+
+.toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.toc-link {
+  display: block;
+  margin-left: -1px;
+  padding: 0.3rem 0 0.3rem 0.85rem;
+  text-decoration: none;
+  font: 500 0.7rem/1.4 "Fira Code", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-left: 2px solid transparent;
+  opacity: 0.6;
+  transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.toc-link:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+.toc-link-about.toc-link-active {
+  color: var(--about-accent);
+  border-left-color: var(--about-accent);
+  opacity: 1;
+}
+
+.toc-link-experience.toc-link-active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  opacity: 1;
+}
+
+.toc-link-projects.toc-link-active {
+  color: var(--projects-accent);
+  border-left-color: var(--projects-accent);
+  opacity: 1;
+}
+
+.toc-link-courses.toc-link-active {
+  color: var(--courses-accent);
+  border-left-color: var(--courses-accent);
+  opacity: 1;
 }

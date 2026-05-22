@@ -193,6 +193,13 @@ const courses: Course[] = [
   },
 ];
 
+const navSections = [
+  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "courses", label: "Courses" },
+] as const;
+
 const socialLinks = [
   { href: "https://github.com/kurtluu", label: "GitHub" },
   { href: "https://www.linkedin.com/in/kurtluu/", label: "LinkedIn" },
@@ -327,10 +334,29 @@ function App() {
     return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
   });
 
+  const [activeSection, setActiveSection] = useState<string>(navSections[0].id);
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     window.localStorage.setItem("theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const offset = 120;
+      let current: string = navSections[0].id;
+      for (const { id } of navSections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= offset) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleCardPointerMove = (event: PointerEvent<HTMLElement>) => {
     if (event.pointerType && event.pointerType !== "mouse") {
@@ -523,6 +549,7 @@ function App() {
           </div>
         </aside>
 
+        <div className="body-row">
         <main className="content">
           <section id="about" className="content-section about-section">
             <div className="section-heading">
@@ -688,6 +715,21 @@ function App() {
             </div>
           </footer>
         </main>
+        <nav className="toc" aria-label="Page sections">
+          <ul>
+            {navSections.map(({ id, label }) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={`toc-link toc-link-${id}${activeSection === id ? " toc-link-active" : ""}`}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        </div>
       </div>
     </>
   );
