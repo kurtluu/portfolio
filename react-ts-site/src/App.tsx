@@ -477,19 +477,6 @@ function App() {
 
   return (
     <>
-      <div
-        className={`reading-progress reading-progress-${activeSection}`}
-        role="progressbar"
-        aria-label="Reading progress"
-        aria-valuenow={Math.round(readingProgress)}
-        aria-valuemin={0}
-        aria-valuemax={100}
-      >
-        <span
-          className="reading-progress-bar"
-          style={{ transform: `translateX(-${100 - readingProgress}%)` }}
-        />
-      </div>
       <div className="background-glow" aria-hidden="true" />
       <div className="layout container">
         <button
