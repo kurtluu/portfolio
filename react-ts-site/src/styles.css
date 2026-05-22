@@ -964,7 +964,7 @@ h3 {
   .toc {
     display: block;
     position: sticky;
-    top: 6rem;
+    top: 26rem;
     border-left: 1px solid rgba(145, 158, 171, 0.24);
   }
 }
