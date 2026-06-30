@@ -43,7 +43,7 @@ type Course = {
 
 const timeline: TimelineItem[] = [
   {
-    period: "2025 - 2026",
+    period: "2025 - 2025",
     title: "Senior Technical Lead · HCLTech",
     company: "HCLTech",
     companyUrl: "https://www.hcltech.com/",
@@ -567,7 +567,7 @@ function App() {
             >
               <p>
                 {renderHighlightedText(
-                  "Hi, I'm Kurt! I'm a software engineer driven by the idea that great software is both technically sound and aethetically crafted. I'm especially interested in building systems and interfaces that are scalable, accessible, and thoughtfully designed.",
+                  "Hi, I'm Kurt! I'm a software engineer driven by the idea that great software is both technically sound and aesthetically crafted. I'm especially interested in building systems and interfaces that are scalable, accessible, and thoughtfully designed.",
                   aboutHighlightTerms
                 )}
               </p>
